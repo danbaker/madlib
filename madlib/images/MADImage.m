@@ -12,11 +12,11 @@
 
 @implementation MADImage
 
-+ (UIImage *)makeGrayImageFromImage:(UIImage *)image;
+- (UIImage *)makeGrayImageFromImage:(UIImage *)image;
 {
     return [MADImage makeGrayImageFromImage:image addWhite:0 multiplyToWhite:1.0];
 }
-+ (UIImage *)makeGrayImageFromImage:(UIImage *)image addWhite:(NSInteger)addWhite multiplyToWhite:(CGFloat)multWhite;
+- (UIImage *)makeGrayImageFromImage:(UIImage *)image addWhite:(NSInteger)addWhite multiplyToWhite:(CGFloat)multWhite;
 {
     const int RED = 1;
     const int GREEN = 2;

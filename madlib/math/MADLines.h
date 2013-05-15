@@ -14,5 +14,6 @@
 + (CGFloat)degreesFromRads:(CGFloat)rads;
 + (CGFloat)radsFromDegrees:(CGFloat)degrees;
 + (CGFloat)angleInRadsOfLineBetweenPointA:(CGPoint)pointA pointB:(CGPoint)pointB;
++ (CGFloat)angleInRadsOfLineBetweenScreenPointA:(CGPoint)pointA pointB:(CGPoint)pointB;
 
 @end

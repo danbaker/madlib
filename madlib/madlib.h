@@ -19,9 +19,11 @@
 #import "MADFileSystem.h"
 
 // images
-// #import "MADImage.h" (?? Why doesn't this file work ??)
+#import "MADImage.h"
+#import "MADUIView.h"
 
 // math
+#import "MADCollisionDetect.h"
 #import "MADLines.h"
 #import "MADMutableVector.h"
 #import "MADVector.h"

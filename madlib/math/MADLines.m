@@ -31,14 +31,11 @@
 {
     CGFloat xDiff = pointB.x - pointA.x;
     CGFloat yDiff = pointB.y - pointA.y;
-    return -atan2(yDiff, xDiff);
+    return atan2(yDiff, xDiff);
+}
++ (CGFloat)angleInRadsOfLineBetweenScreenPointA:(CGPoint)pointA pointB:(CGPoint)pointB;
+{
+    return -[self angleInRadsOfLineBetweenPointA:pointA pointB:pointB];
 }
 
-
-//public static double GetAngleOfLineBetweenTwoPoints(Point.Double p1, Point.Double p2)
-//{
-//    double xDiff = p2.x - p1.x;
-//    double yDiff = p2.y - p1.y;
-//    return Math.toDegrees(Math.atan2(yDiff, xDiff));
-//}
 @end
