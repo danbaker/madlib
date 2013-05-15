@@ -15,6 +15,8 @@
 		2A119AF5174336AE003DAA85 /* MADImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A119AF4174336AE003DAA85 /* MADImage.m */; };
 		2A119AF817433C38003DAA85 /* MADCollisionDetect.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A119AF717433C37003DAA85 /* MADCollisionDetect.m */; };
 		2A119AFB17433D02003DAA85 /* MADUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A119AFA17433D02003DAA85 /* MADUIView.m */; };
+		2A119AFF17433DFE003DAA85 /* PathFinderExhaustive.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A119AFE17433DFE003DAA85 /* PathFinderExhaustive.m */; };
+		2A119B0217433E43003DAA85 /* PathFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A119B0117433E43003DAA85 /* PathFinder.m */; };
 		2A91A60F17317394007E9FCE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A91A60E17317394007E9FCE /* Foundation.framework */; };
 		2A91A61417317394007E9FCE /* madlib.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2A91A61317317394007E9FCE /* madlib.h */; };
 		2A91A61617317394007E9FCE /* madlib.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A91A61517317394007E9FCE /* madlib.m */; };
@@ -72,6 +74,10 @@
 		2A119AF717433C37003DAA85 /* MADCollisionDetect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MADCollisionDetect.m; path = math/MADCollisionDetect.m; sourceTree = "<group>"; };
 		2A119AF917433D02003DAA85 /* MADUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MADUIView.h; path = images/MADUIView.h; sourceTree = "<group>"; };
 		2A119AFA17433D02003DAA85 /* MADUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MADUIView.m; path = images/MADUIView.m; sourceTree = "<group>"; };
+		2A119AFD17433DFE003DAA85 /* PathFinderExhaustive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PathFinderExhaustive.h; path = boards/PathFinderExhaustive.h; sourceTree = "<group>"; };
+		2A119AFE17433DFE003DAA85 /* PathFinderExhaustive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PathFinderExhaustive.m; path = boards/PathFinderExhaustive.m; sourceTree = "<group>"; };
+		2A119B0017433E43003DAA85 /* PathFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PathFinder.h; path = boards/PathFinder.h; sourceTree = "<group>"; };
+		2A119B0117433E43003DAA85 /* PathFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PathFinder.m; path = boards/PathFinder.m; sourceTree = "<group>"; };
 		2A91A60B17317394007E9FCE /* libmadlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmadlib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A91A60E17317394007E9FCE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2A91A61217317394007E9FCE /* madlib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "madlib-Prefix.pch"; sourceTree = "<group>"; };
@@ -161,12 +167,24 @@
 		2A119AF2174335A2003DAA85 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				2A119AFC17433DED003DAA85 /* boards */,
 				2AB9DCA5173AA2B20027163F /* categories */,
 				2A119AEA17433451003DAA85 /* files */,
 				2A119AEE17433577003DAA85 /* images */,
 				2A119ADB17432C32003DAA85 /* math */,
 			);
 			name = src;
+			sourceTree = "<group>";
+		};
+		2A119AFC17433DED003DAA85 /* boards */ = {
+			isa = PBXGroup;
+			children = (
+				2A119B0017433E43003DAA85 /* PathFinder.h */,
+				2A119B0117433E43003DAA85 /* PathFinder.m */,
+				2A119AFD17433DFE003DAA85 /* PathFinderExhaustive.h */,
+				2A119AFE17433DFE003DAA85 /* PathFinderExhaustive.m */,
+			);
+			name = boards;
 			sourceTree = "<group>";
 		};
 		2A91A60217317394007E9FCE = {
@@ -367,6 +385,8 @@
 				2A119AF5174336AE003DAA85 /* MADImage.m in Sources */,
 				2A119AF817433C38003DAA85 /* MADCollisionDetect.m in Sources */,
 				2A119AFB17433D02003DAA85 /* MADUIView.m in Sources */,
+				2A119AFF17433DFE003DAA85 /* PathFinderExhaustive.m in Sources */,
+				2A119B0217433E43003DAA85 /* PathFinder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

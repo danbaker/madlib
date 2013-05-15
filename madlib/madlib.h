@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+// boards
+//#import "PathFinder.h'
+//#import "PathFinderExhaustive.h'
+
+
 // categories
 #import "NSArray+MAD.h"
 #import "NSDictionary+MAD.h"
