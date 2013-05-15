@@ -1,0 +1,10 @@
+//
+// Prefix header for all source files of the 'madlib' target in the 'madlib' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <Foundation/Foundation.h>
+    #import <CoreGraphics/CoreGraphics.h>
+#endif
+
