@@ -17,6 +17,10 @@
 		2A119AFB17433D02003DAA85 /* MADUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A119AFA17433D02003DAA85 /* MADUIView.m */; };
 		2A119AFF17433DFE003DAA85 /* PathFinderExhaustive.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A119AFE17433DFE003DAA85 /* PathFinderExhaustive.m */; };
 		2A119B0217433E43003DAA85 /* PathFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A119B0117433E43003DAA85 /* PathFinder.m */; };
+		2A119B0517434224003DAA85 /* UIColor+MAD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A119B0417434224003DAA85 /* UIColor+MAD.m */; };
+		2A119B08174342B5003DAA85 /* PerlinNoise.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A119B07174342B5003DAA85 /* PerlinNoise.m */; };
+		2A119B0D17434353003DAA85 /* QuadTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A119B0A17434352003DAA85 /* QuadTile.m */; };
+		2A119B0F17434399003DAA85 /* QuadTileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A119B0C17434352003DAA85 /* QuadTileTests.m */; };
 		2A91A60F17317394007E9FCE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A91A60E17317394007E9FCE /* Foundation.framework */; };
 		2A91A61417317394007E9FCE /* madlib.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2A91A61317317394007E9FCE /* madlib.h */; };
 		2A91A61617317394007E9FCE /* madlib.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A91A61517317394007E9FCE /* madlib.m */; };
@@ -78,6 +82,14 @@
 		2A119AFE17433DFE003DAA85 /* PathFinderExhaustive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PathFinderExhaustive.m; path = boards/PathFinderExhaustive.m; sourceTree = "<group>"; };
 		2A119B0017433E43003DAA85 /* PathFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PathFinder.h; path = boards/PathFinder.h; sourceTree = "<group>"; };
 		2A119B0117433E43003DAA85 /* PathFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PathFinder.m; path = boards/PathFinder.m; sourceTree = "<group>"; };
+		2A119B0317434224003DAA85 /* UIColor+MAD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+MAD.h"; path = "categories/UIColor+MAD.h"; sourceTree = "<group>"; };
+		2A119B0417434224003DAA85 /* UIColor+MAD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+MAD.m"; path = "categories/UIColor+MAD.m"; sourceTree = "<group>"; };
+		2A119B06174342B5003DAA85 /* PerlinNoise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PerlinNoise.h; path = math/PerlinNoise.h; sourceTree = "<group>"; };
+		2A119B07174342B5003DAA85 /* PerlinNoise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PerlinNoise.m; path = math/PerlinNoise.m; sourceTree = "<group>"; };
+		2A119B0917434352003DAA85 /* QuadTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuadTile.h; path = boards/QuadTile.h; sourceTree = "<group>"; };
+		2A119B0A17434352003DAA85 /* QuadTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuadTile.m; path = boards/QuadTile.m; sourceTree = "<group>"; };
+		2A119B0B17434352003DAA85 /* QuadTileTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuadTileTests.h; path = boards/QuadTileTests.h; sourceTree = "<group>"; };
+		2A119B0C17434352003DAA85 /* QuadTileTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuadTileTests.m; path = boards/QuadTileTests.m; sourceTree = "<group>"; };
 		2A91A60B17317394007E9FCE /* libmadlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmadlib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A91A60E17317394007E9FCE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2A91A61217317394007E9FCE /* madlib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "madlib-Prefix.pch"; sourceTree = "<group>"; };
@@ -140,6 +152,8 @@
 				2A119AE017432C92003DAA85 /* MADRandom.m */,
 				2A119ADC17432C44003DAA85 /* MADVector.h */,
 				2A119ADD17432C44003DAA85 /* MADVector.m */,
+				2A119B06174342B5003DAA85 /* PerlinNoise.h */,
+				2A119B07174342B5003DAA85 /* PerlinNoise.m */,
 			);
 			name = math;
 			sourceTree = "<group>";
@@ -183,6 +197,10 @@
 				2A119B0117433E43003DAA85 /* PathFinder.m */,
 				2A119AFD17433DFE003DAA85 /* PathFinderExhaustive.h */,
 				2A119AFE17433DFE003DAA85 /* PathFinderExhaustive.m */,
+				2A119B0917434352003DAA85 /* QuadTile.h */,
+				2A119B0A17434352003DAA85 /* QuadTile.m */,
+				2A119B0B17434352003DAA85 /* QuadTileTests.h */,
+				2A119B0C17434352003DAA85 /* QuadTileTests.m */,
 			);
 			name = boards;
 			sourceTree = "<group>";
@@ -269,6 +287,8 @@
 				2AB9DCB0173AA3080027163F /* NSMutableDictionary+MAD.m */,
 				2AB9DCB1173AA3080027163F /* NSObject+MAD.h */,
 				2AB9DCB2173AA3080027163F /* NSObject+MAD.m */,
+				2A119B0317434224003DAA85 /* UIColor+MAD.h */,
+				2A119B0417434224003DAA85 /* UIColor+MAD.m */,
 			);
 			name = categories;
 			sourceTree = "<group>";
@@ -387,6 +407,9 @@
 				2A119AFB17433D02003DAA85 /* MADUIView.m in Sources */,
 				2A119AFF17433DFE003DAA85 /* PathFinderExhaustive.m in Sources */,
 				2A119B0217433E43003DAA85 /* PathFinder.m in Sources */,
+				2A119B0517434224003DAA85 /* UIColor+MAD.m in Sources */,
+				2A119B08174342B5003DAA85 /* PerlinNoise.m in Sources */,
+				2A119B0D17434353003DAA85 /* QuadTile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +419,7 @@
 			files = (
 				2A91A62D17317394007E9FCE /* madlibTests.m in Sources */,
 				2AB9DCB7173AA31B0027163F /* NSJSONSerializationTests.m in Sources */,
+				2A119B0F17434399003DAA85 /* QuadTileTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

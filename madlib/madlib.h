@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 
 // boards
-//#import "PathFinder.h'
-//#import "PathFinderExhaustive.h'
-
+#import "PathFinder.h"
+#import "PathFinderExhaustive.h"
+#import "QuadTile.h"
 
 // categories
 #import "NSArray+MAD.h"
@@ -19,6 +19,7 @@
 #import "NSJSONSerialization+MAD.h"
 #import "NSMutableDictionary+MAD.h"
 #import "NSObject+MAD.h"
+#import "UIColor+MAD.h"
 
 // files
 #import "MADFileSystem.h"
