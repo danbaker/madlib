@@ -36,6 +36,8 @@
 		2AB9DCB3173AA3080027163F /* NSMutableDictionary+MAD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB9DCB0173AA3080027163F /* NSMutableDictionary+MAD.m */; };
 		2AB9DCB4173AA3080027163F /* NSObject+MAD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB9DCB2173AA3080027163F /* NSObject+MAD.m */; };
 		2AB9DCB7173AA31B0027163F /* NSJSONSerializationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB9DCB6173AA31B0027163F /* NSJSONSerializationTests.m */; };
+		2AC4DC7D1746711D0088B062 /* MADHexBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC4DC7C1746711D0088B062 /* MADHexBoard.m */; };
+		2AC4DC80174672050088B062 /* MADBoardIndexPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC4DC7F174672050088B062 /* MADBoardIndexPath.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +116,10 @@
 		2AB9DCB2173AA3080027163F /* NSObject+MAD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MAD.m"; path = "categories/NSObject+MAD.m"; sourceTree = "<group>"; };
 		2AB9DCB5173AA31B0027163F /* NSJSONSerializationTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSJSONSerializationTests.h; path = categories/NSJSONSerializationTests.h; sourceTree = "<group>"; };
 		2AB9DCB6173AA31B0027163F /* NSJSONSerializationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSJSONSerializationTests.m; path = categories/NSJSONSerializationTests.m; sourceTree = "<group>"; };
+		2AC4DC7B1746711D0088B062 /* MADHexBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MADHexBoard.h; path = boards/MADHexBoard.h; sourceTree = "<group>"; };
+		2AC4DC7C1746711D0088B062 /* MADHexBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MADHexBoard.m; path = boards/MADHexBoard.m; sourceTree = "<group>"; };
+		2AC4DC7E174672050088B062 /* MADBoardIndexPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MADBoardIndexPath.h; path = boards/MADBoardIndexPath.h; sourceTree = "<group>"; };
+		2AC4DC7F174672050088B062 /* MADBoardIndexPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MADBoardIndexPath.m; path = boards/MADBoardIndexPath.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +199,10 @@
 		2A119AFC17433DED003DAA85 /* boards */ = {
 			isa = PBXGroup;
 			children = (
+				2AC4DC7E174672050088B062 /* MADBoardIndexPath.h */,
+				2AC4DC7F174672050088B062 /* MADBoardIndexPath.m */,
+				2AC4DC7B1746711D0088B062 /* MADHexBoard.h */,
+				2AC4DC7C1746711D0088B062 /* MADHexBoard.m */,
 				2A119B0017433E43003DAA85 /* PathFinder.h */,
 				2A119B0117433E43003DAA85 /* PathFinder.m */,
 				2A119AFD17433DFE003DAA85 /* PathFinderExhaustive.h */,
@@ -410,6 +420,8 @@
 				2A119B0517434224003DAA85 /* UIColor+MAD.m in Sources */,
 				2A119B08174342B5003DAA85 /* PerlinNoise.m in Sources */,
 				2A119B0D17434353003DAA85 /* QuadTile.m in Sources */,
+				2AC4DC7D1746711D0088B062 /* MADHexBoard.m in Sources */,
+				2AC4DC80174672050088B062 /* MADBoardIndexPath.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+#warning DANB TODO: convert this into a category on UIImage
+
 @interface MADImage : NSObject
 
 + (UIImage *)makeGrayImageFromImage:(UIImage *)image;
