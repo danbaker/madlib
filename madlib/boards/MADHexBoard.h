@@ -10,16 +10,16 @@
 @class MADBoardIndexPath;
 
 
-@protocol MADHexBoardVisible <NSObject>
-@required
-- (CGFloat)seeThroughCell:(MADBoardIndexPath*)indexPath;
-@end
+//@protocol MADHexBoardVisible <NSObject>
+//@required
+//- (CGFloat)seeThroughCell:(MADBoardIndexPath*)indexPath;
+//@end
 
 
 
 @interface MADHexBoard : NSObject
 
-@property (nonatomic, strong) id<MADHexBoardVisible> delegate;
+//@property (nonatomic, strong) id<MADHexBoardVisible> delegate;
 @property (nonatomic, assign) bool layoutPointUp;
 @property (nonatomic, assign) bool edgesWrap;
 @property (nonatomic, assign) NSInteger width;
@@ -34,8 +34,10 @@
 - (MADBoardIndexPath*)moveIndexPath:(MADBoardIndexPath*)indexPath inDir:(NSInteger)dir;
 - (NSInteger)distanceFromCell:(MADBoardIndexPath*)cellA toCell:(MADBoardIndexPath*)cellB;
 - (NSArray*)allCellsDistanceOf:(NSInteger)away fromCell:(MADBoardIndexPath*)indexPath;
-- (void)enumerateVisibleCellsFrom:(MADBoardIndexPath*)cell visionDistance:(NSInteger)distance usingBlock:(void (^)(MADBoardIndexPath* indexPath, BOOL *stop))block;
-- (NSSet *)visibleCellsFrom:(MADBoardIndexPath*)cell visionDistance:(NSInteger)distance;
+
+
+//- (void)enumerateVisibleCellsFrom:(MADBoardIndexPath*)cell visionDistance:(NSInteger)distance usingBlock:(void (^)(MADBoardIndexPath* indexPath, BOOL *stop))block;
+//- (NSSet *)visibleCellsFrom:(MADBoardIndexPath*)cell visionDistance:(NSInteger)distance;
 
 @end
 
