@@ -22,6 +22,7 @@
 #import "NSMutableDictionary+MAD.h"
 #import "NSObject+MAD.h"
 #import "UIColor+MAD.h"
+#import "UIScreen+MAD.h"
 
 // files
 #import "MADFileSystem.h"

@@ -8,12 +8,6 @@
 
 #import "MADHexBoard.h"
 #import "MADBoardIndexPath.h"
-//#import "MADCollisionDetect.h"
-//#import "math.h"
-//#include "MADVector.h"
-//#include "MADMutableVector.h"
-//#include "MADLines.h"
-//#include "NSArray+MAD.h"
 
 @implementation MADHexBoard
 {
@@ -23,6 +17,8 @@
     int debugCollisionCircleLineCount;
     NSMutableArray *arraysOfCellsAtDistances;      // NSArray<NSarray>  (an array of arrays of HexGridIndexPaths)  arraysOfCells[1] = an array containing all cells that are 1 away from the original cell
 }
+
+@dynamic radius;
 
 - (id)initWithRadius:(CGFloat)radius
 {
@@ -38,6 +34,10 @@
     C = radius;
     A = C / 2;
     B = sinf(60.0*M_PI/180.0) * C;
+}
+- (CGFloat)radius
+{
+    return C;
 }
 
 - (CGPoint)getHexMidpointForCell:(MADBoardIndexPath *)cell;
@@ -214,6 +214,18 @@
     MADBoardIndexPath *newPath = [[MADBoardIndexPath alloc] initForColumn:column forRow:row];
     return [self normalizeIndexPath:newPath];
 };
+
+- (void)enumerateAllCellsWithBlock:(void (^)(NSInteger column, NSInteger row, BOOL * stop))block
+{
+    BOOL done = NO;
+    for(NSInteger y=0; !done && y<self.height; y++)
+    {
+        for(NSInteger x=0; !done && x<self.width; x++)
+        {
+            block(x,y,&done);
+        }
+    }
+}
 
 - (bool)isCell:(MADBoardIndexPath*)cellA touchingCell:(MADBoardIndexPath*)cellB
 {

@@ -24,6 +24,7 @@
 @property (nonatomic, assign) bool edgesWrap;
 @property (nonatomic, assign) NSInteger width;
 @property (nonatomic, assign) NSInteger height;
+@property (nonatomic, assign) CGFloat radius;
 
 - (id)initWithRadius:(CGFloat)radius;
 
@@ -35,6 +36,7 @@
 - (NSInteger)distanceFromCell:(MADBoardIndexPath*)cellA toCell:(MADBoardIndexPath*)cellB;
 - (NSArray*)allCellsDistanceOf:(NSInteger)away fromCell:(MADBoardIndexPath*)indexPath;
 
+- (void)enumerateAllCellsWithBlock:(void (^)(NSInteger column, NSInteger row, BOOL * stop))block;
 
 //- (void)enumerateVisibleCellsFrom:(MADBoardIndexPath*)cell visionDistance:(NSInteger)distance usingBlock:(void (^)(MADBoardIndexPath* indexPath, BOOL *stop))block;
 //- (NSSet *)visibleCellsFrom:(MADBoardIndexPath*)cell visionDistance:(NSInteger)distance;
