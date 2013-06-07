@@ -22,6 +22,7 @@
 		2A119B0D17434353003DAA85 /* QuadTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A119B0A17434352003DAA85 /* QuadTile.m */; };
 		2A119B0F17434399003DAA85 /* QuadTileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A119B0C17434352003DAA85 /* QuadTileTests.m */; };
 		2A45CFE917612DDC000DD91E /* UIScreen+MAD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A45CFE817612DDC000DD91E /* UIScreen+MAD.m */; };
+		2A45CFEC17623123000DD91E /* MAD2DBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A45CFEB17623123000DD91E /* MAD2DBoard.m */; };
 		2A91A60F17317394007E9FCE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A91A60E17317394007E9FCE /* Foundation.framework */; };
 		2A91A61417317394007E9FCE /* madlib.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2A91A61317317394007E9FCE /* madlib.h */; };
 		2A91A61617317394007E9FCE /* madlib.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A91A61517317394007E9FCE /* madlib.m */; };
@@ -95,6 +96,8 @@
 		2A119B0C17434352003DAA85 /* QuadTileTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuadTileTests.m; path = boards/QuadTileTests.m; sourceTree = "<group>"; };
 		2A45CFE717612DDC000DD91E /* UIScreen+MAD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScreen+MAD.h"; path = "categories/UIScreen+MAD.h"; sourceTree = "<group>"; };
 		2A45CFE817612DDC000DD91E /* UIScreen+MAD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScreen+MAD.m"; path = "categories/UIScreen+MAD.m"; sourceTree = "<group>"; };
+		2A45CFEA17623123000DD91E /* MAD2DBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MAD2DBoard.h; path = boards/MAD2DBoard.h; sourceTree = "<group>"; };
+		2A45CFEB17623123000DD91E /* MAD2DBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MAD2DBoard.m; path = boards/MAD2DBoard.m; sourceTree = "<group>"; };
 		2A91A60B17317394007E9FCE /* libmadlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmadlib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A91A60E17317394007E9FCE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2A91A61217317394007E9FCE /* madlib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "madlib-Prefix.pch"; sourceTree = "<group>"; };
@@ -214,6 +217,8 @@
 				2A119B0A17434352003DAA85 /* QuadTile.m */,
 				2A119B0B17434352003DAA85 /* QuadTileTests.h */,
 				2A119B0C17434352003DAA85 /* QuadTileTests.m */,
+				2A45CFEA17623123000DD91E /* MAD2DBoard.h */,
+				2A45CFEB17623123000DD91E /* MAD2DBoard.m */,
 			);
 			name = boards;
 			sourceTree = "<group>";
@@ -428,6 +433,7 @@
 				2AC4DC7D1746711D0088B062 /* MADHexBoard.m in Sources */,
 				2AC4DC80174672050088B062 /* MADBoardIndexPath.m in Sources */,
 				2A45CFE917612DDC000DD91E /* UIScreen+MAD.m in Sources */,
+				2A45CFEC17623123000DD91E /* MAD2DBoard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

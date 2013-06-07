@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 // boards
+#import "MAD2DBoard.h"
 #import "MADBoardIndexPath.h"
 #import "MADHexBoard.h"
 #import "PathFinder.h"
