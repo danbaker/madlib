@@ -29,8 +29,11 @@
 
 - (void)setBoardSize:(CGSize)boardSize
 {
-    _boardSize = boardSize;
-    [self buildBoard];
+    if (_boardSize.width != boardSize.width && _boardSize.height != boardSize.height)
+    {
+        _boardSize = boardSize;
+        [self buildBoard];
+    }
 }
 
 - (BOARDCELLTYPE) valueAtX:(int)x Y:(int)y

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef char BOARDCELLTYPE;
+typedef int BOARDCELLTYPE;
 
 @interface MAD2DBoard : NSObject
 @property (nonatomic, assign) CGSize boardSize;             // dimensions of the board
