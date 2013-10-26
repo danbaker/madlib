@@ -19,6 +19,7 @@
 - (id)init
 {
     self = [super init];
+    self.edgeValue = -127;
     return self;
 }
 

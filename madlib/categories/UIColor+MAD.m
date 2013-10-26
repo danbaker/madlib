@@ -8,8 +8,18 @@
 //
 
 #import "UIColor+MAD.h"
+#import "MADRandom.h"
 
 @implementation UIColor (MAD)
+
++ (UIColor *)randomColor;
+{
+    CGFloat r = [MADRandom randomFloatBetween0and1];
+    CGFloat g = [MADRandom randomFloatBetween0and1];
+    CGFloat b = [MADRandom randomFloatBetween0and1];
+    return [UIColor colorWithRed:r green:g blue:b alpha:0.9];
+}
+
 
 + (UIColor *)colorForFadeBetweenFirstColor:(UIColor *)firstColor
                                secondColor:(UIColor *)secondColor

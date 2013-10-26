@@ -19,6 +19,7 @@
 }
 
 @dynamic radius;
+@dynamic hexSize;
 
 - (id)initWithRadius:(CGFloat)radius
 {
@@ -26,6 +27,7 @@
     [self setRadius:radius];
     self.layoutPointUp = NO;
     self.edgesWrap = NO;
+    self.margin = CGPointZero;
     return self;
 }
 
@@ -38,6 +40,15 @@
 - (CGFloat)radius
 {
     return C;
+}
+
+- (CGSize)hexSize
+{
+    if (self.layoutPointUp) {
+        return CGSizeMake(B*2, (A + C/2)*2);
+    } else {
+        return CGSizeMake((A + C/2)*2, B*2);
+    }
 }
 
 - (CGPoint)getHexMidpointForCell:(MADBoardIndexPath *)cell;
@@ -69,14 +80,14 @@
     bool xIsOdd = (x % 2);
     CGFloat hexx = x * (A + C);
     CGFloat hexy = y * (B + B) + (xIsOdd? B : 0);
-    return CGPointMake(hexx, hexy);
+    return CGPointMake(hexx + self.margin.x, hexy + self.margin.y);
 }
 - (CGPoint)getPointUpHexTopLeftPointForColumn:(NSInteger)x Row:(NSInteger)y;
 {
     bool yIsOdd = (y % 2);
     CGFloat hexx = x * (B + B) + (yIsOdd? B : 0);
     CGFloat hexy = y * (A + C);
-    return CGPointMake(hexx, hexy);
+    return CGPointMake(hexx + self.margin.x, hexy + self.margin.y);
 }
 
 

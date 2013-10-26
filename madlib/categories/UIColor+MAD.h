@@ -10,6 +10,8 @@
 
 @interface UIColor (MAD)
 
++ (UIColor *)randomColor;
+
 + (UIColor *)colorForFadeBetweenFirstColor:(UIColor *)firstColor
                                secondColor:(UIColor *)secondColor
                                    atRatio:(CGFloat)ratio;

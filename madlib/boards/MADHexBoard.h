@@ -25,6 +25,8 @@
 @property (nonatomic, assign) NSInteger width;
 @property (nonatomic, assign) NSInteger height;
 @property (nonatomic, assign) CGFloat radius;
+@property (nonatomic, assign) CGPoint margin;
+@property (nonatomic, assign, readonly) CGSize hexSize;
 
 - (id)initWithRadius:(CGFloat)radius;
 
