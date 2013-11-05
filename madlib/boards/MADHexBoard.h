@@ -30,12 +30,14 @@
 
 - (id)initWithRadius:(CGFloat)radius;
 
+- (MADBoardIndexPath*)indexPathForPoint:(CGPoint)point;
 - (CGPoint)getHexMidpointForColumn:(NSInteger)x Row:(NSInteger)y;
 - (CGPoint)getHexTopLeftPointForColumn:(NSInteger)x Row:(NSInteger)y;
 - (NSInteger)normalizeDir:(NSInteger)dir;
 - (MADBoardIndexPath*)normalizeIndexPath:(MADBoardIndexPath*)indexPath;
 - (MADBoardIndexPath*)moveIndexPath:(MADBoardIndexPath*)indexPath inDir:(NSInteger)dir;
 - (NSInteger)distanceFromCell:(MADBoardIndexPath*)cellA toCell:(MADBoardIndexPath*)cellB;
+- (NSInteger)distanceFromCell:(MADBoardIndexPath*)cellA toCell:(MADBoardIndexPath*)cellB maximumDistance:(NSInteger)maxDistance;
 - (NSArray*)allCellsDistanceOf:(NSInteger)away fromCell:(MADBoardIndexPath*)indexPath;
 
 - (void)enumerateAllCellsWithBlock:(void (^)(NSInteger column, NSInteger row, BOOL * stop))block;

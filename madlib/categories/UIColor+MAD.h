@@ -11,6 +11,7 @@
 @interface UIColor (MAD)
 
 + (UIColor *)randomColor;
++ (UIColor *)randomColorWithAlpha:(CGFloat)a;
 
 + (UIColor *)colorForFadeBetweenFirstColor:(UIColor *)firstColor
                                secondColor:(UIColor *)secondColor

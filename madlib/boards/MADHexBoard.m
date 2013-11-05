@@ -8,6 +8,7 @@
 
 #import "MADHexBoard.h"
 #import "MADBoardIndexPath.h"
+#import "MADCollisionDetect.h"
 
 @implementation MADHexBoard
 {
@@ -42,6 +43,11 @@
     return C;
 }
 
+- (CGFloat)radiusShort
+{
+    return C / sin(M_PI/6);
+}
+
 - (CGSize)hexSize
 {
     if (self.layoutPointUp) {
@@ -49,6 +55,59 @@
     } else {
         return CGSizeMake((A + C/2)*2, B*2);
     }
+}
+
+- (MADBoardIndexPath*)indexPathForPoint:(CGPoint)point;
+{
+    if (self.layoutPointUp)
+    {   // Note: have NOT written this one yet
+        
+    }
+    else
+    {   // point left/right
+        int x = point.x - self.margin.x;
+        if (x < 0) return nil;
+        int y = point.y - self.margin.y;
+        if (y < 0) return nil;
+        int row = y / (B*2);
+        int col = x / (A + C);
+        int colPixel = x - col * (A + C);
+        int col2 = -1;
+        int row2 = -1;
+        if (colPixel < A)
+        {
+            col2 = col - 1;
+        } else {
+            if (col % 2)
+            {
+                if (y < B) return nil;
+                row = (y+B) / (B*2) - 1;
+            }
+        }
+        if (col2 >= 0) {
+            row2 = row - 1;
+        } else {
+            //NSLog(@"indexPathForPoint: col=%i  row=%i", col, row);
+            return [[MADBoardIndexPath alloc] initForColumn:col forRow:row];
+        }
+        //NSLog(@"indexPathForPoint: col=%i OR %i    row=%i OR %i", col, col2, row, row2);
+        CGPoint pnt = CGPointMake(point.x,point.y);
+        CGFloat radius = self.radius;
+        for(int xx=col-1; xx<=col; xx++) {
+            for(int yy=row-1; yy<=row; yy++) {
+                CGPoint pnt2 = [self getHexMidpointForColumn:xx Row:yy];
+                //CGFloat dist = sqrtf((pnt.x-pnt2.x)*(pnt.x-pnt2.x) + (pnt.y-pnt2.y)*(pnt.y-pnt2.y));
+                //NSLog(@"--- (%1.0f,%1.0f) to  (%i,%i)(%1.0f,%1.0f) radius(%1.0f)  dist(%1.1f)", pnt.x,pnt.y, xx,yy, pnt2.x,pnt2.y, radius, dist);
+                if ([MADCollisionDetect detectCollisionCircleAt:pnt radius:radius circleAt:pnt2 radius:0])
+                {
+                    //NSLog(@" ... found hit at: %i,%i", xx,yy);
+                    return [[MADBoardIndexPath alloc] initForColumn:xx forRow:yy];
+                }
+            }
+        }
+    }
+    //NSLog(@" ... no hit");
+    return nil;
 }
 
 - (CGPoint)getHexMidpointForCell:(MADBoardIndexPath *)cell;
@@ -257,20 +316,27 @@
 // Note: this routine is NOT fast
 - (NSInteger)distanceFromCell:(MADBoardIndexPath*)cellA toCell:(MADBoardIndexPath*)cellB;
 {
+    NSInteger maxDistance = self.width + self.height;
+    return [self distanceFromCell:cellA toCell:cellB maximumDistance:maxDistance];
+}
+
+- (NSInteger)distanceFromCell:(MADBoardIndexPath*)cellA toCell:(MADBoardIndexPath*)cellB maximumDistance:(NSInteger)maxDistance;
+{
     if (cellA.row == cellB.row && cellA.column == cellB.column)
     {   // exact same cell
         return 0;
     }
-    NSInteger maxDistance = self.width + self.height;
-    for(NSInteger distance=1; distance < maxDistance; distance++)
+    for(NSInteger distance=1; distance <= maxDistance; distance++)
     {
         NSArray* cellsAtDistance = [self allCellsDistanceOf:distance fromCell:cellA];
         if ([cellsAtDistance containsObject:cellB]) {
             return distance;
         }
     }
-    return maxDistance;
+    return maxDistance+1;
 }
+
+
 
 - (NSArray*)allCellsDistanceOf:(NSInteger)away fromCell:(MADBoardIndexPath*)indexPath
 {
@@ -449,6 +515,8 @@
  A = 1/2 * C
  B = sin(60) * C
 
+ Radius: s over sin(180/n) Where s=the length of any side and n=the number of sides
+ Radius == C / sin(180/6);
  
  .   +
  . / | \

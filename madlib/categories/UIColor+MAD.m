@@ -14,10 +14,14 @@
 
 + (UIColor *)randomColor;
 {
+    return [self randomColorWithAlpha:0.9];
+}
++ (UIColor *)randomColorWithAlpha:(CGFloat)a;
+{
     CGFloat r = [MADRandom randomFloatBetween0and1];
     CGFloat g = [MADRandom randomFloatBetween0and1];
     CGFloat b = [MADRandom randomFloatBetween0and1];
-    return [UIColor colorWithRed:r green:g blue:b alpha:0.9];
+    return [UIColor colorWithRed:r green:g blue:b alpha:a];
 }
 
 
