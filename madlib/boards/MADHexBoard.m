@@ -60,8 +60,48 @@
 - (MADBoardIndexPath*)indexPathForPoint:(CGPoint)point;
 {
     if (self.layoutPointUp)
-    {   // Note: have NOT written this one yet
-        
+    {   // point up/down
+        int x = point.x - self.margin.x;
+        if (x < 0) return nil;
+        int y = point.y - self.margin.y;
+        if (y < 0) return nil;
+        int row = y / (A+C);
+        int col = x / (B*2);
+        int rowPixel = y - row * (A + C);
+        NSLog(@"rowPixel = %i", rowPixel);
+        int col2 = -1;
+        int row2 = -1;
+        if (rowPixel < A)
+        {
+            row2 = row - 1;
+        } else {
+            if (row % 2)
+            {
+                if (x < B) return nil;
+                col = (x+B) / (B*2) - 1;
+            }
+        }
+        if (row2 >= 0) {
+            col2 = col - 1;
+        } else {
+            NSLog(@"indexPathForPoint: col=%i  row=%i", col, row);
+            return [[MADBoardIndexPath alloc] initForColumn:col forRow:row];
+        }
+        NSLog(@"indexPathForPoint: col=%i OR %i    row=%i OR %i", col, col2, row, row2);
+        CGPoint pnt = CGPointMake(point.x,point.y);
+        CGFloat radius = self.radius;
+        for(int xx=col-1; xx<=col; xx++) {
+            for(int yy=row-1; yy<=row; yy++) {
+                CGPoint pnt2 = [self getHexMidpointForColumn:xx Row:yy];
+//                CGFloat dist = sqrtf((pnt.x-pnt2.x)*(pnt.x-pnt2.x) + (pnt.y-pnt2.y)*(pnt.y-pnt2.y));
+//                NSLog(@"--- (%1.0f,%1.0f) to  (%i,%i)(%1.0f,%1.0f) radius(%1.0f)  dist(%1.1f)", pnt.x,pnt.y, xx,yy, pnt2.x,pnt2.y, radius, dist);
+                if ([MADCollisionDetect detectCollisionCircleAt:pnt radius:radius circleAt:pnt2 radius:0])
+                {
+                    NSLog(@" ... found hit at: %i,%i", xx,yy);
+                    return [[MADBoardIndexPath alloc] initForColumn:xx forRow:yy];
+                }
+            }
+        }
     }
     else
     {   // point left/right
@@ -116,7 +156,7 @@
 }
 - (CGPoint)getHexMidpointForColumn:(NSInteger)x Row:(NSInteger)y;
 {
-    CGPoint pt = [self getPointRightHexTopLeftPointForColumn:x Row:y];
+    CGPoint pt = [self getHexTopLeftPointForColumn:x Row:y];
     if (self.layoutPointUp) {
         pt.x += B;
         pt.y += A + C/2;
