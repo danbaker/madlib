@@ -32,6 +32,7 @@
 		2A91A62417317394007E9FCE /* libmadlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A91A60B17317394007E9FCE /* libmadlib.a */; };
 		2A91A62A17317394007E9FCE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A91A62817317394007E9FCE /* InfoPlist.strings */; };
 		2A91A62D17317394007E9FCE /* madlibTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A91A62C17317394007E9FCE /* madlibTests.m */; };
+		2AB326EC1829FDE300F20947 /* MADArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB326EB1829FDE300F20947 /* MADArrow.m */; };
 		2AB9DCAC173AA2FD0027163F /* NSArray+MAD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB9DCA7173AA2FD0027163F /* NSArray+MAD.m */; };
 		2AB9DCAD173AA2FD0027163F /* NSDictionary+MAD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB9DCA9173AA2FD0027163F /* NSDictionary+MAD.m */; };
 		2AB9DCAE173AA2FD0027163F /* NSJSONSerialization+MAD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB9DCAB173AA2FD0027163F /* NSJSONSerialization+MAD.m */; };
@@ -110,6 +111,8 @@
 		2A91A62917317394007E9FCE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2A91A62B17317394007E9FCE /* madlibTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = madlibTests.h; sourceTree = "<group>"; };
 		2A91A62C17317394007E9FCE /* madlibTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = madlibTests.m; sourceTree = "<group>"; };
+		2AB326EA1829FDE300F20947 /* MADArrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MADArrow.h; path = images/MADArrow.h; sourceTree = "<group>"; };
+		2AB326EB1829FDE300F20947 /* MADArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MADArrow.m; path = images/MADArrow.m; sourceTree = "<group>"; };
 		2AB9DCA6173AA2FD0027163F /* NSArray+MAD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+MAD.h"; path = "categories/NSArray+MAD.h"; sourceTree = "<group>"; };
 		2AB9DCA7173AA2FD0027163F /* NSArray+MAD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MAD.m"; path = "categories/NSArray+MAD.m"; sourceTree = "<group>"; };
 		2AB9DCA8173AA2FD0027163F /* NSDictionary+MAD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+MAD.h"; path = "categories/NSDictionary+MAD.h"; sourceTree = "<group>"; };
@@ -186,6 +189,8 @@
 				2A119AF4174336AE003DAA85 /* MADImage.m */,
 				2A119AF917433D02003DAA85 /* MADUIView.h */,
 				2A119AFA17433D02003DAA85 /* MADUIView.m */,
+				2AB326EA1829FDE300F20947 /* MADArrow.h */,
+				2AB326EB1829FDE300F20947 /* MADArrow.m */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -413,6 +418,7 @@
 			files = (
 				2A91A61617317394007E9FCE /* madlib.m in Sources */,
 				2AB9DCAC173AA2FD0027163F /* NSArray+MAD.m in Sources */,
+				2AB326EC1829FDE300F20947 /* MADArrow.m in Sources */,
 				2AB9DCAD173AA2FD0027163F /* NSDictionary+MAD.m in Sources */,
 				2AB9DCAE173AA2FD0027163F /* NSJSONSerialization+MAD.m in Sources */,
 				2AB9DCB3173AA3080027163F /* NSMutableDictionary+MAD.m in Sources */,
