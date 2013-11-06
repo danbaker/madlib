@@ -11,6 +11,8 @@
 @interface MADArrowView : UIView
 
 @property (nonatomic, retain) UIColor *fillColor;
+
 - (id)initFromPoint:(CGPoint)fromPnt toPoint:(CGPoint)toPnt;
+- (id)initFromPoint:(CGPoint)fromPnt toPoint:(CGPoint)toPnt tailWidth:(CGFloat)tailWidth headWidth:(CGFloat)headWidth headLength:(CGFloat)headLength;
 
 @end

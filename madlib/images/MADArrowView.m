@@ -14,6 +14,9 @@
 @property (nonatomic, assign) enum arrowDirection direction;
 @property (nonatomic, assign) CGPoint fromPoint;
 @property (nonatomic, assign) CGPoint toPoint;
+@property (nonatomic, assign) CGFloat tailWidth;
+@property (nonatomic, assign) CGFloat headWidth;
+@property (nonatomic, assign) CGFloat headLength;
 @end
 
 enum arrowDirection {
@@ -26,9 +29,14 @@ enum arrowDirection {
 
 @implementation MADArrowView
 
-- (id)initFromPoint:(CGPoint)fromPnt toPoint:(CGPoint)toPnt
+- (id)initFromPoint:(CGPoint)fromPnt toPoint:(CGPoint)toPnt;
 {
-    CGFloat margin = 6;
+    return [self initFromPoint:fromPnt toPoint:toPnt tailWidth:7 headWidth:11 headLength:20];
+}
+
+- (id)initFromPoint:(CGPoint)fromPnt toPoint:(CGPoint)toPnt tailWidth:(CGFloat)tailWidth headWidth:(CGFloat)headWidth headLength:(CGFloat)headLength
+{
+    CGFloat margin = (int)(headWidth / 2 + 0.99);
     self.fromPoint = fromPnt;
     self.toPoint = toPnt;
     
@@ -69,39 +77,19 @@ enum arrowDirection {
         }
     }
     
-    NSLog(@"ArrowView dir:%i  (%1.1f,%1.1f) to (%1.1f,%1.1f)  size:(%1.1f,%1.1f)", self.direction, toPnt.x,toPnt.y, fromPnt.x,fromPnt.y, w,h);
+    //NSLog(@"ArrowView dir:%i  (%1.1f,%1.1f) to (%1.1f,%1.1f)  size:(%1.1f,%1.1f)", self.direction, toPnt.x,toPnt.y, fromPnt.x,fromPnt.y, w,h);
     self = [super initWithFrame:frame];
     self.backgroundColor = [UIColor clearColor];
     self.fillColor = [UIColor blueColor];
+    self.headLength = headLength;
+    self.headWidth = headWidth;
+    self.tailWidth = tailWidth;
     return self;
 }
 
 - (void)drawRect:(CGRect)rect
 {
-    CGPoint startPnt = self.fromPoint;
-    CGPoint endPnt = self.toPoint;
-//    CGFloat w = rect.size.width;
-//    CGFloat h = rect.size.height;
-//    switch (self.direction)
-//    {
-//        case downRight:
-//            startPnt = CGPointMake(0,0);
-//            endPnt = CGPointMake(w,h);
-//            break;
-//        case downLeft:
-//            startPnt = CGPointMake(w,0);
-//            endPnt = CGPointMake(0,h);
-//            break;
-//        case upRight:
-//            startPnt = CGPointMake(0,h);
-//            endPnt = CGPointMake(w,0);
-//            break;
-//        case upLeft:
-//            startPnt = CGPointMake(w,h);
-//            endPnt = CGPointMake(0,0);
-//            break;
-//    }
-    UIBezierPath *arrowPath = [MADArrow MADBezierPathWithArrowFromPoint:startPnt toPoint:endPnt tailWidth:5 headWidth:11 headLength:20];
+    UIBezierPath *arrowPath = [MADArrow MADBezierPathWithArrowFromPoint:self.fromPoint toPoint:self.toPoint tailWidth:self.tailWidth headWidth:self.headWidth headLength:self.headLength];
     [self.fillColor setFill];
     [arrowPath fill];
 }
