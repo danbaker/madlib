@@ -32,6 +32,7 @@
 #import "MADImage.h"
 #import "MADUIView.h"
 #import "MADArrow.h"
+#import "MADArrowView.h"
 
 // math
 #import "MADCollisionDetect.h"
