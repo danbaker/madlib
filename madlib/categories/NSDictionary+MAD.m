@@ -45,6 +45,61 @@
     return value;
 }
 
+
+- (BOOL) boolForKey:(NSString*)key defaultsTo:(BOOL)defaultValue
+{
+    id value = [self objectForKey:key];
+    if ([value isKindOfClass:[NSNumber class]])
+    {
+        NSNumber *num = (NSNumber*)value;
+        BOOL b = [num boolValue];
+        return b;
+    }
+    return defaultValue;
+}
+
+- (NSNumber*) numberForKey:(NSString*)key defaultsTo:(NSNumber*)defaultValue
+{
+    id value = [self objectForKey:key];
+    if ([value isKindOfClass:[NSNumber class]])
+    {
+        return (NSNumber*)value;
+    }
+    return defaultValue;
+}
+
+- (NSArray*) arrayForKey:(NSString*)key defaultsTo:(NSArray*)defaultValue
+{
+    id value = [self objectForKey:key];
+    if ([value isKindOfClass:[NSArray class]])
+    {
+        return (NSArray*)value;
+    }
+    return defaultValue;
+}
+
+- (NSDate*) dateForKey:(NSString*)key defaultsTo:(NSDate*)defaultValue
+{
+    id value = [self objectForKey:key];
+    if ([value isKindOfClass:[NSDate class]])
+    {
+        return (NSDate*)value;
+    }
+    return defaultValue;
+}
+
+- (NSDictionary*) dictionaryForKey:(NSString*)key defaultsTo:(NSDictionary*)defaultValue
+{
+    id value = [self objectForKey:key];
+    if ([value isKindOfClass:[NSDictionary class]])
+    {
+        return (NSDictionary*)value;
+    }
+    return defaultValue;
+}
+
+
+
 // treat this dictionary as a two-level-deep (or nested) dictionary
 // the first key is used to find the second (or nested, or sub) dictionary
 // the sub-key is used to locate the object within the nested dictionary

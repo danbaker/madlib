@@ -337,6 +337,20 @@
     }
 }
 
+- (NSInteger)directionFromIndexPath:(MADBoardIndexPath *)fromIndexPath toIndexPath:(MADBoardIndexPath *)toIndexPath
+{
+    NSInteger dir = (self.layoutPointUp? DIR_WEST : DIR_NORTH);
+    for(int i=0; i<6; i++, dir++)
+    {
+        MADBoardIndexPath *ip = [self moveIndexPath:fromIndexPath inDir:dir];
+        if (ip.row == toIndexPath.row && ip.column == toIndexPath.column)
+        {
+            return dir;
+        }
+    }
+    return -1;
+}
+
 - (bool)isCell:(MADBoardIndexPath*)cellA touchingCell:(MADBoardIndexPath*)cellB
 {
     NSInteger distRow = abs(cellA.row - cellB.row);

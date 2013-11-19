@@ -41,6 +41,8 @@
 - (NSArray*)allCellsDistanceOf:(NSInteger)away fromCell:(MADBoardIndexPath*)indexPath;
 
 - (void)enumerateAllCellsWithBlock:(void (^)(NSInteger column, NSInteger row, BOOL * stop))block;
+- (NSInteger) directionFromIndexPath:(MADBoardIndexPath*)fromIndexPath toIndexPath:(MADBoardIndexPath*)toIndexPath;
+
 
 //- (void)enumerateVisibleCellsFrom:(MADBoardIndexPath*)cell visionDistance:(NSInteger)distance usingBlock:(void (^)(MADBoardIndexPath* indexPath, BOOL *stop))block;
 //- (NSSet *)visibleCellsFrom:(MADBoardIndexPath*)cell visionDistance:(NSInteger)distance;

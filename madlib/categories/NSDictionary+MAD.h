@@ -13,6 +13,12 @@
 - (CGFloat)floatForKey:(NSString*)key defaultValue:(CGFloat)defaultValue;
 - (NSInteger)integerForKey:(NSString*)key defaultValue:(NSInteger)defaultValue;
 - (NSString*)stringForKey:(NSString*)key defaultValue:(NSString*)defaultValue;
+- (BOOL)boolForKey:(NSString*)key defaultsTo:(BOOL)defaultValue;
+- (NSNumber*)numberForKey:(NSString*)key defaultsTo:(NSNumber*)defaultValue;
+- (NSArray*)arrayForKey:(NSString*)key defaultsTo:(NSArray*)defaultValue;
+- (NSDate*)dateForKey:(NSString*)key defaultsTo:(NSDate*)defaultValue;
+- (NSDictionary*)dictionaryForKey:(NSString*)key defaultsTo:(NSDictionary*)defaultValue;
+
 - (id)objectForKey:(id)aKey subKey:(id)subKey;
 
 - (id)objectForKeyPath:(NSString*)keyPath defaultValue:(id)defaultValue;

@@ -16,7 +16,10 @@
 }
 + (double)randomDoubleBetween0and1;
 {
-    return ((double)arc4random() / ULONG_MAX);
+    double d = arc4random();
+    double dm = 4294967295;//ULONG_MAX;
+    d = d / dm;
+    return d;
 }
 +(float)randomFloatBetween0and1;
 {

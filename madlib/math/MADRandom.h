@@ -13,6 +13,6 @@
 
 + (NSInteger)randomIntegerMin:(NSInteger)lo max:(NSInteger)hi;
 + (double)randomDoubleBetween0and1;
-+ (CGFloat)randomFloatBetween0and1;
++ (float)randomFloatBetween0and1;
 
 @end
