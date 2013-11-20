@@ -10,6 +10,9 @@
 
 @interface MADDirectionView : UIView
 
+@property (nonatomic, assign, readonly) CGPoint fromPoint;
+@property (nonatomic, assign, readonly) CGPoint toPoint;
+
 @property (nonatomic, copy) void (^drawRectBlock)(CGRect rect);
 
 - (id)initFromPoint:(CGPoint)fromPnt toPoint:(CGPoint)toPnt;
