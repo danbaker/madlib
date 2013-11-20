@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MADDirectionView.h"
 
-@interface MADArrowView : UIView
+@interface MADArrowView : MADDirectionView
 
 @property (nonatomic, retain) UIColor *fillColor;
 

@@ -32,6 +32,7 @@
 		2A91A62417317394007E9FCE /* libmadlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A91A60B17317394007E9FCE /* libmadlib.a */; };
 		2A91A62A17317394007E9FCE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A91A62817317394007E9FCE /* InfoPlist.strings */; };
 		2A91A62D17317394007E9FCE /* madlibTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A91A62C17317394007E9FCE /* madlibTests.m */; };
+		2A946065183D03E200427E31 /* MADDirectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A946064183D03E200427E31 /* MADDirectionView.m */; };
 		2AB326EC1829FDE300F20947 /* MADArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB326EB1829FDE300F20947 /* MADArrow.m */; };
 		2AB326EF182A915100F20947 /* MADArrowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB326EE182A915100F20947 /* MADArrowView.m */; };
 		2AB9DCAC173AA2FD0027163F /* NSArray+MAD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB9DCA7173AA2FD0027163F /* NSArray+MAD.m */; };
@@ -112,6 +113,8 @@
 		2A91A62917317394007E9FCE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2A91A62B17317394007E9FCE /* madlibTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = madlibTests.h; sourceTree = "<group>"; };
 		2A91A62C17317394007E9FCE /* madlibTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = madlibTests.m; sourceTree = "<group>"; };
+		2A946063183D03E200427E31 /* MADDirectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MADDirectionView.h; path = images/MADDirectionView.h; sourceTree = "<group>"; };
+		2A946064183D03E200427E31 /* MADDirectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MADDirectionView.m; path = images/MADDirectionView.m; sourceTree = "<group>"; };
 		2AB326EA1829FDE300F20947 /* MADArrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MADArrow.h; path = images/MADArrow.h; sourceTree = "<group>"; };
 		2AB326EB1829FDE300F20947 /* MADArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MADArrow.m; path = images/MADArrow.m; sourceTree = "<group>"; };
 		2AB326ED182A915100F20947 /* MADArrowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MADArrowView.h; path = images/MADArrowView.h; sourceTree = "<group>"; };
@@ -196,6 +199,8 @@
 				2AB326EB1829FDE300F20947 /* MADArrow.m */,
 				2AB326ED182A915100F20947 /* MADArrowView.h */,
 				2AB326EE182A915100F20947 /* MADArrowView.m */,
+				2A946063183D03E200427E31 /* MADDirectionView.h */,
+				2A946064183D03E200427E31 /* MADDirectionView.m */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -434,6 +439,7 @@
 				2A119AE817432F54003DAA85 /* MADLines.m in Sources */,
 				2A119AE917432F54003DAA85 /* MADMutableVector.m in Sources */,
 				2A119AED17433464003DAA85 /* MADFileSystem.m in Sources */,
+				2A946065183D03E200427E31 /* MADDirectionView.m in Sources */,
 				2A119AF5174336AE003DAA85 /* MADImage.m in Sources */,
 				2A119AF817433C38003DAA85 /* MADCollisionDetect.m in Sources */,
 				2A119AFB17433D02003DAA85 /* MADUIView.m in Sources */,
