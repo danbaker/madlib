@@ -345,7 +345,7 @@
         MADBoardIndexPath *ip = [self moveIndexPath:fromIndexPath inDir:dir];
         if (ip.row == toIndexPath.row && ip.column == toIndexPath.column)
         {
-            return dir;
+            return [self normalizeDir:dir];
         }
     }
     return -1;
