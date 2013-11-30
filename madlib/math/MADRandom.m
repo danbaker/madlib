@@ -17,7 +17,7 @@
 + (double)randomDoubleBetween0and1;
 {
     double d = arc4random();
-    double dm = 4294967295;//ULONG_MAX;
+    double dm = UINT32_MAX;
     d = d / dm;
     return d;
 }
