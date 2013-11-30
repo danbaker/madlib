@@ -11,5 +11,7 @@
 @interface NSObject (MAD)
 
 - (void)performBlock:(void (^)())block afterDelay:(NSTimeInterval)delay;
+- (void)performBlockInBackground:(void (^)())block;
+- (void)performBlockOnMainThread:(void (^)())block;
 
 @end
