@@ -41,4 +41,14 @@
     return UIApplication.sharedApplication.statusBarOrientation;
 }
 
++ (void)addToWindowTheView:(UIView*)view
+{
+//    ((AppDelegate)UIApplication.SharedApplication.Delegate).Window.RootViewController.Add(view);
+    // Note: this does NOT handle rotation.
+    // For rotation handling see: https://github.com/hfossli/AGWindowView
+    UIWindow * mainWindow = [UIApplication sharedApplication].windows.firstObject;
+    [mainWindow addSubview:view];
+    [mainWindow bringSubviewToFront:view];
+    // DANB NOTE: No WOrky
+}
 @end

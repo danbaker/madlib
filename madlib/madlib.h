@@ -28,12 +28,13 @@
 // files
 #import "MADFileSystem.h"
 
-// images
+// images and views
 #import "MADImage.h"
 #import "MADUIView.h"
 #import "MADArrow.h"
 #import "MADArrowView.h"
 #import "MADDirectionView.h"
+#import "MADPickerWheel.h"
 
 // math
 #import "MADCollisionDetect.h"

@@ -14,4 +14,6 @@
 + (CGRect)boundsForOrientation:(UIInterfaceOrientation)orientation;
 + (UIInterfaceOrientation)deviceOrientation;
 
++ (void)addToWindowTheView:(UIView*)view;
+
 @end

@@ -43,6 +43,8 @@
 		2AB9DCB7173AA31B0027163F /* NSJSONSerializationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB9DCB6173AA31B0027163F /* NSJSONSerializationTests.m */; };
 		2AC4DC7D1746711D0088B062 /* MADHexBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC4DC7C1746711D0088B062 /* MADHexBoard.m */; };
 		2AC4DC80174672050088B062 /* MADBoardIndexPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC4DC7F174672050088B062 /* MADBoardIndexPath.m */; };
+		2AEA645018595674009821B8 /* MADPickerWheel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEA644F18595674009821B8 /* MADPickerWheel.m */; };
+		2AEA645418597780009821B8 /* AGWindowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEA645218597780009821B8 /* AGWindowView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +137,11 @@
 		2AC4DC7C1746711D0088B062 /* MADHexBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MADHexBoard.m; path = boards/MADHexBoard.m; sourceTree = "<group>"; };
 		2AC4DC7E174672050088B062 /* MADBoardIndexPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MADBoardIndexPath.h; path = boards/MADBoardIndexPath.h; sourceTree = "<group>"; };
 		2AC4DC7F174672050088B062 /* MADBoardIndexPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MADBoardIndexPath.m; path = boards/MADBoardIndexPath.m; sourceTree = "<group>"; };
+		2AEA644E18595674009821B8 /* MADPickerWheel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MADPickerWheel.h; path = images/MADPickerWheel.h; sourceTree = "<group>"; };
+		2AEA644F18595674009821B8 /* MADPickerWheel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MADPickerWheel.m; path = images/MADPickerWheel.m; sourceTree = "<group>"; };
+		2AEA645118597780009821B8 /* AGWindowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGWindowView.h; path = images/AGWindowView.h; sourceTree = "<group>"; };
+		2AEA645218597780009821B8 /* AGWindowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGWindowView.m; path = images/AGWindowView.m; sourceTree = "<group>"; };
+		2AEA645318597780009821B8 /* AGWindowViewDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGWindowViewDefines.h; path = images/AGWindowViewDefines.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,21 +195,26 @@
 			name = files;
 			sourceTree = "<group>";
 		};
-		2A119AEE17433577003DAA85 /* images */ = {
+		2A119AEE17433577003DAA85 /* imagesAndViews */ = {
 			isa = PBXGroup;
 			children = (
-				2A119AF3174336AE003DAA85 /* MADImage.h */,
-				2A119AF4174336AE003DAA85 /* MADImage.m */,
-				2A119AF917433D02003DAA85 /* MADUIView.h */,
-				2A119AFA17433D02003DAA85 /* MADUIView.m */,
+				2AEA645118597780009821B8 /* AGWindowView.h */,
+				2AEA645218597780009821B8 /* AGWindowView.m */,
+				2AEA645318597780009821B8 /* AGWindowViewDefines.h */,
 				2AB326EA1829FDE300F20947 /* MADArrow.h */,
 				2AB326EB1829FDE300F20947 /* MADArrow.m */,
 				2AB326ED182A915100F20947 /* MADArrowView.h */,
 				2AB326EE182A915100F20947 /* MADArrowView.m */,
 				2A946063183D03E200427E31 /* MADDirectionView.h */,
 				2A946064183D03E200427E31 /* MADDirectionView.m */,
+				2A119AF3174336AE003DAA85 /* MADImage.h */,
+				2A119AF4174336AE003DAA85 /* MADImage.m */,
+				2AEA644E18595674009821B8 /* MADPickerWheel.h */,
+				2AEA644F18595674009821B8 /* MADPickerWheel.m */,
+				2A119AF917433D02003DAA85 /* MADUIView.h */,
+				2A119AFA17433D02003DAA85 /* MADUIView.m */,
 			);
-			name = images;
+			name = imagesAndViews;
 			sourceTree = "<group>";
 		};
 		2A119AF2174335A2003DAA85 /* src */ = {
@@ -211,7 +223,7 @@
 				2A119AFC17433DED003DAA85 /* boards */,
 				2AB9DCA5173AA2B20027163F /* categories */,
 				2A119AEA17433451003DAA85 /* files */,
-				2A119AEE17433577003DAA85 /* images */,
+				2A119AEE17433577003DAA85 /* imagesAndViews */,
 				2A119ADB17432C32003DAA85 /* math */,
 			);
 			name = src;
@@ -426,6 +438,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AEA645418597780009821B8 /* AGWindowView.m in Sources */,
 				2A91A61617317394007E9FCE /* madlib.m in Sources */,
 				2AB9DCAC173AA2FD0027163F /* NSArray+MAD.m in Sources */,
 				2AB326EC1829FDE300F20947 /* MADArrow.m in Sources */,
@@ -435,6 +448,7 @@
 				2AB9DCB3173AA3080027163F /* NSMutableDictionary+MAD.m in Sources */,
 				2AB9DCB4173AA3080027163F /* NSObject+MAD.m in Sources */,
 				2A119ADE17432C44003DAA85 /* MADVector.m in Sources */,
+				2AEA645018595674009821B8 /* MADPickerWheel.m in Sources */,
 				2A119AE117432C92003DAA85 /* MADRandom.m in Sources */,
 				2A119AE817432F54003DAA85 /* MADLines.m in Sources */,
 				2A119AE917432F54003DAA85 /* MADMutableVector.m in Sources */,
