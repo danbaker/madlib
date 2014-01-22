@@ -74,7 +74,10 @@
 
 - (void)tapGesture:(UIGestureRecognizer*)gr
 {
-    [self showPicker];
+    if (self.items.count > 0)
+    {
+        [self showPicker];
+    }
 }
 
 - (void)showPicker
@@ -83,10 +86,13 @@
     {
         self.wndView = [[AGWindowView alloc] initAndAddToKeyWindow];
         self.wndView.supportedInterfaceOrientations = AGInterfaceOrientationMaskAll;
+        UITapGestureRecognizer *tgr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGesture:)];
+        [self.wndView addGestureRecognizer:tgr];
+        
         CGPoint rootZero = [self convertPoint:self.frame.origin toView:self.superview.superview];
         CGRect frame = self.frame;
-        frame.origin.y = rootZero.y - 100;
-        frame.origin.x -= 20;
+        frame.origin.y = rootZero.y - 150;      // Note: special numbers for Mirrors game
+        frame.origin.x -= 20;                   // Note: special numbers for Mirrors game
         self.picker = [[UIPickerView alloc] initWithFrame:frame];
         self.picker.delegate = self;
         self.picker.showsSelectionIndicator = YES;

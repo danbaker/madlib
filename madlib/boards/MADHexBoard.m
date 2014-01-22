@@ -36,7 +36,8 @@
 {
     C = radius;
     A = C / 2;
-    B = sinf(60.0*M_PI/180.0) * C;
+    B = floorf(sinf(60.0*M_PI/180.0) * C);
+    NSLog(@"MADHexBoard radius=%f   A=%f   B=%f   C=%f   hexSize=%f,%f", radius, A, B, C, self.hexSize.width,self.hexSize.height);
 }
 - (CGFloat)radius
 {

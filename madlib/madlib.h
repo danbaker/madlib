@@ -35,6 +35,7 @@
 #import "MADArrowView.h"
 #import "MADDirectionView.h"
 #import "MADPickerWheel.h"
+#import "MADEmailer.h"
 
 // math
 #import "MADCollisionDetect.h"

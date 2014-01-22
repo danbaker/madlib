@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A02A6F1188D8E1E00E4E0E6 /* MADTurnBasedMatchHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A02A6F0188D8E1E00E4E0E6 /* MADTurnBasedMatchHelper.m */; };
 		2A119ADE17432C44003DAA85 /* MADVector.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A119ADD17432C44003DAA85 /* MADVector.m */; };
 		2A119AE117432C92003DAA85 /* MADRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A119AE017432C92003DAA85 /* MADRandom.m */; };
 		2A119AE817432F54003DAA85 /* MADLines.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A119AE517432F54003DAA85 /* MADLines.m */; };
@@ -21,8 +22,11 @@
 		2A119B08174342B5003DAA85 /* PerlinNoise.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A119B07174342B5003DAA85 /* PerlinNoise.m */; };
 		2A119B0D17434353003DAA85 /* QuadTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A119B0A17434352003DAA85 /* QuadTile.m */; };
 		2A119B0F17434399003DAA85 /* QuadTileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A119B0C17434352003DAA85 /* QuadTileTests.m */; };
+		2A1E39C2188EC354000682C1 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A1E39C1188EC354000682C1 /* GameKit.framework */; };
 		2A45CFE917612DDC000DD91E /* UIScreen+MAD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A45CFE817612DDC000DD91E /* UIScreen+MAD.m */; };
 		2A45CFEC17623123000DD91E /* MAD2DBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A45CFEB17623123000DD91E /* MAD2DBoard.m */; };
+		2A5246F51869F81300C8FCD5 /* MADEmailer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A5246F41869F81300C8FCD5 /* MADEmailer.m */; };
+		2A5246F71869FB3000C8FCD5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A5246F61869FB3000C8FCD5 /* MessageUI.framework */; };
 		2A91A60F17317394007E9FCE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A91A60E17317394007E9FCE /* Foundation.framework */; };
 		2A91A61417317394007E9FCE /* madlib.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2A91A61317317394007E9FCE /* madlib.h */; };
 		2A91A61617317394007E9FCE /* madlib.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A91A61517317394007E9FCE /* madlib.m */; };
@@ -71,6 +75,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2A02A6EF188D8E1E00E4E0E6 /* MADTurnBasedMatchHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MADTurnBasedMatchHelper.h; path = gamecenter/MADTurnBasedMatchHelper.h; sourceTree = "<group>"; };
+		2A02A6F0188D8E1E00E4E0E6 /* MADTurnBasedMatchHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MADTurnBasedMatchHelper.m; path = gamecenter/MADTurnBasedMatchHelper.m; sourceTree = "<group>"; };
 		2A119ADC17432C44003DAA85 /* MADVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MADVector.h; path = math/MADVector.h; sourceTree = "<group>"; };
 		2A119ADD17432C44003DAA85 /* MADVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MADVector.m; path = math/MADVector.m; sourceTree = "<group>"; };
 		2A119ADF17432C92003DAA85 /* MADRandom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MADRandom.h; path = math/MADRandom.h; sourceTree = "<group>"; };
@@ -99,10 +105,14 @@
 		2A119B0A17434352003DAA85 /* QuadTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuadTile.m; path = boards/QuadTile.m; sourceTree = "<group>"; };
 		2A119B0B17434352003DAA85 /* QuadTileTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuadTileTests.h; path = boards/QuadTileTests.h; sourceTree = "<group>"; };
 		2A119B0C17434352003DAA85 /* QuadTileTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuadTileTests.m; path = boards/QuadTileTests.m; sourceTree = "<group>"; };
+		2A1E39C1188EC354000682C1 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		2A45CFE717612DDC000DD91E /* UIScreen+MAD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScreen+MAD.h"; path = "categories/UIScreen+MAD.h"; sourceTree = "<group>"; };
 		2A45CFE817612DDC000DD91E /* UIScreen+MAD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScreen+MAD.m"; path = "categories/UIScreen+MAD.m"; sourceTree = "<group>"; };
 		2A45CFEA17623123000DD91E /* MAD2DBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MAD2DBoard.h; path = boards/MAD2DBoard.h; sourceTree = "<group>"; };
 		2A45CFEB17623123000DD91E /* MAD2DBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MAD2DBoard.m; path = boards/MAD2DBoard.m; sourceTree = "<group>"; };
+		2A5246F31869F81300C8FCD5 /* MADEmailer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MADEmailer.h; path = images/MADEmailer.h; sourceTree = "<group>"; };
+		2A5246F41869F81300C8FCD5 /* MADEmailer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MADEmailer.m; path = images/MADEmailer.m; sourceTree = "<group>"; };
+		2A5246F61869FB3000C8FCD5 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		2A91A60B17317394007E9FCE /* libmadlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmadlib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A91A60E17317394007E9FCE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2A91A61217317394007E9FCE /* madlib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "madlib-Prefix.pch"; sourceTree = "<group>"; };
@@ -149,6 +159,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A1E39C2188EC354000682C1 /* GameKit.framework in Frameworks */,
+				2A5246F71869FB3000C8FCD5 /* MessageUI.framework in Frameworks */,
 				2A91A60F17317394007E9FCE /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,6 +179,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A02A6EB188D8DD300E4E0E6 /* gamecenter */ = {
+			isa = PBXGroup;
+			children = (
+				2A02A6EF188D8E1E00E4E0E6 /* MADTurnBasedMatchHelper.h */,
+				2A02A6F0188D8E1E00E4E0E6 /* MADTurnBasedMatchHelper.m */,
+			);
+			name = gamecenter;
+			sourceTree = "<group>";
+		};
 		2A119ADB17432C32003DAA85 /* math */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +228,8 @@
 				2AB326EE182A915100F20947 /* MADArrowView.m */,
 				2A946063183D03E200427E31 /* MADDirectionView.h */,
 				2A946064183D03E200427E31 /* MADDirectionView.m */,
+				2A5246F31869F81300C8FCD5 /* MADEmailer.h */,
+				2A5246F41869F81300C8FCD5 /* MADEmailer.m */,
 				2A119AF3174336AE003DAA85 /* MADImage.h */,
 				2A119AF4174336AE003DAA85 /* MADImage.m */,
 				2AEA644E18595674009821B8 /* MADPickerWheel.h */,
@@ -220,6 +243,7 @@
 		2A119AF2174335A2003DAA85 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				2A02A6EB188D8DD300E4E0E6 /* gamecenter */,
 				2A119AFC17433DED003DAA85 /* boards */,
 				2AB9DCA5173AA2B20027163F /* categories */,
 				2A119AEA17433451003DAA85 /* files */,
@@ -272,6 +296,8 @@
 		2A91A60D17317394007E9FCE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2A1E39C1188EC354000682C1 /* GameKit.framework */,
+				2A5246F61869FB3000C8FCD5 /* MessageUI.framework */,
 				2A91A60E17317394007E9FCE /* Foundation.framework */,
 				2A91A61D17317394007E9FCE /* SenTestingKit.framework */,
 				2A91A61F17317394007E9FCE /* UIKit.framework */,
@@ -439,11 +465,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AEA645418597780009821B8 /* AGWindowView.m in Sources */,
+				2A02A6F1188D8E1E00E4E0E6 /* MADTurnBasedMatchHelper.m in Sources */,
 				2A91A61617317394007E9FCE /* madlib.m in Sources */,
 				2AB9DCAC173AA2FD0027163F /* NSArray+MAD.m in Sources */,
 				2AB326EC1829FDE300F20947 /* MADArrow.m in Sources */,
 				2AB9DCAD173AA2FD0027163F /* NSDictionary+MAD.m in Sources */,
 				2AB9DCAE173AA2FD0027163F /* NSJSONSerialization+MAD.m in Sources */,
+				2A5246F51869F81300C8FCD5 /* MADEmailer.m in Sources */,
 				2AB326EF182A915100F20947 /* MADArrowView.m in Sources */,
 				2AB9DCB3173AA3080027163F /* NSMutableDictionary+MAD.m in Sources */,
 				2AB9DCB4173AA3080027163F /* NSObject+MAD.m in Sources */,
