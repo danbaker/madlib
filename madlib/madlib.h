@@ -28,6 +28,9 @@
 // files
 #import "MADFileSystem.h"
 
+// Game Center
+#import "MADTurnBasedMatchHelper.h"
+
 // images and views
 #import "MADImage.h"
 #import "MADUIView.h"

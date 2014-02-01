@@ -243,10 +243,10 @@
 		2A119AF2174335A2003DAA85 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				2A02A6EB188D8DD300E4E0E6 /* gamecenter */,
 				2A119AFC17433DED003DAA85 /* boards */,
 				2AB9DCA5173AA2B20027163F /* categories */,
 				2A119AEA17433451003DAA85 /* files */,
+				2A02A6EB188D8DD300E4E0E6 /* gamecenter */,
 				2A119AEE17433577003DAA85 /* imagesAndViews */,
 				2A119ADB17432C32003DAA85 /* math */,
 			);
