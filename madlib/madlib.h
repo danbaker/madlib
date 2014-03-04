@@ -33,15 +33,9 @@
 // Game Center
 #import "MADTurnBasedMatchHelper.h"
 
-// images and views
+// images
 #import "MADImage.h"
-#import "MADUIView.h"
 #import "MADArrow.h"
-#import "MADArrowView.h"
-#import "MADDirectionView.h"
-#import "MADPickerWheel.h"
-#import "MADEmailer.h"
-#import "MADOverlayView.h"
 
 // math
 #import "MADCollisionDetect.h"
@@ -50,3 +44,13 @@
 #import "MADVector.h"
 #import "MADRandom.h"
 
+// views
+#import "MADUIView.h"
+#import "MADArrowView.h"
+#import "MADDirectionView.h"
+#import "MADPickerWheel.h"
+#import "MADEmailer.h"
+#import "MADOverlayView.h"
+
+
+#import "MADAppDelegateHelper.h"

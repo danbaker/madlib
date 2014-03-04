@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2A02A6F1188D8E1E00E4E0E6 /* MADTurnBasedMatchHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A02A6F0188D8E1E00E4E0E6 /* MADTurnBasedMatchHelper.m */; };
 		2A0641BA18C6257100E6B2FD /* MADOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0641B918C6257100E6B2FD /* MADOverlayView.m */; };
+		2A06421118C6301E00E6B2FD /* MADBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A06421018C6301E00E6B2FD /* MADBannerViewController.m */; };
+		2A06421618C632F300E6B2FD /* MADAppDelegateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A06421518C632F300E6B2FD /* MADAppDelegateHelper.m */; };
 		2A119ADE17432C44003DAA85 /* MADVector.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A119ADD17432C44003DAA85 /* MADVector.m */; };
 		2A119AE117432C92003DAA85 /* MADRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A119AE017432C92003DAA85 /* MADRandom.m */; };
 		2A119AE817432F54003DAA85 /* MADLines.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A119AE517432F54003DAA85 /* MADLines.m */; };
@@ -80,6 +82,10 @@
 		2A02A6F0188D8E1E00E4E0E6 /* MADTurnBasedMatchHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MADTurnBasedMatchHelper.m; path = gamecenter/MADTurnBasedMatchHelper.m; sourceTree = "<group>"; };
 		2A0641B818C6257100E6B2FD /* MADOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MADOverlayView.h; path = images/MADOverlayView.h; sourceTree = "<group>"; };
 		2A0641B918C6257100E6B2FD /* MADOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MADOverlayView.m; path = images/MADOverlayView.m; sourceTree = "<group>"; };
+		2A06420F18C6301E00E6B2FD /* MADBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MADBannerViewController.h; path = images/MADBannerViewController.h; sourceTree = "<group>"; };
+		2A06421018C6301E00E6B2FD /* MADBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MADBannerViewController.m; path = images/MADBannerViewController.m; sourceTree = "<group>"; };
+		2A06421418C632F300E6B2FD /* MADAppDelegateHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MADAppDelegateHelper.h; path = images/MADAppDelegateHelper.h; sourceTree = "<group>"; };
+		2A06421518C632F300E6B2FD /* MADAppDelegateHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MADAppDelegateHelper.m; path = images/MADAppDelegateHelper.m; sourceTree = "<group>"; };
 		2A119ADC17432C44003DAA85 /* MADVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MADVector.h; path = math/MADVector.h; sourceTree = "<group>"; };
 		2A119ADD17432C44003DAA85 /* MADVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MADVector.m; path = math/MADVector.m; sourceTree = "<group>"; };
 		2A119ADF17432C92003DAA85 /* MADRandom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MADRandom.h; path = math/MADRandom.h; sourceTree = "<group>"; };
@@ -191,6 +197,32 @@
 			name = gamecenter;
 			sourceTree = "<group>";
 		};
+		2A06420E18C62FA800E6B2FD /* views */ = {
+			isa = PBXGroup;
+			children = (
+				2AEA644E18595674009821B8 /* MADPickerWheel.h */,
+				2AEA644F18595674009821B8 /* MADPickerWheel.m */,
+				2A119AF917433D02003DAA85 /* MADUIView.h */,
+				2A119AFA17433D02003DAA85 /* MADUIView.m */,
+				2A0641B818C6257100E6B2FD /* MADOverlayView.h */,
+				2A0641B918C6257100E6B2FD /* MADOverlayView.m */,
+				2A5246F31869F81300C8FCD5 /* MADEmailer.h */,
+				2A5246F41869F81300C8FCD5 /* MADEmailer.m */,
+				2A946063183D03E200427E31 /* MADDirectionView.h */,
+				2A946064183D03E200427E31 /* MADDirectionView.m */,
+				2AB326ED182A915100F20947 /* MADArrowView.h */,
+				2AB326EE182A915100F20947 /* MADArrowView.m */,
+				2AEA645118597780009821B8 /* AGWindowView.h */,
+				2AEA645218597780009821B8 /* AGWindowView.m */,
+				2AEA645318597780009821B8 /* AGWindowViewDefines.h */,
+				2A06420F18C6301E00E6B2FD /* MADBannerViewController.h */,
+				2A06421018C6301E00E6B2FD /* MADBannerViewController.m */,
+				2A06421418C632F300E6B2FD /* MADAppDelegateHelper.h */,
+				2A06421518C632F300E6B2FD /* MADAppDelegateHelper.m */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
 		2A119ADB17432C32003DAA85 /* math */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,30 +251,15 @@
 			name = files;
 			sourceTree = "<group>";
 		};
-		2A119AEE17433577003DAA85 /* imagesAndViews */ = {
+		2A119AEE17433577003DAA85 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				2AEA645118597780009821B8 /* AGWindowView.h */,
-				2AEA645218597780009821B8 /* AGWindowView.m */,
-				2AEA645318597780009821B8 /* AGWindowViewDefines.h */,
 				2AB326EA1829FDE300F20947 /* MADArrow.h */,
 				2AB326EB1829FDE300F20947 /* MADArrow.m */,
-				2AB326ED182A915100F20947 /* MADArrowView.h */,
-				2AB326EE182A915100F20947 /* MADArrowView.m */,
-				2A946063183D03E200427E31 /* MADDirectionView.h */,
-				2A946064183D03E200427E31 /* MADDirectionView.m */,
-				2A5246F31869F81300C8FCD5 /* MADEmailer.h */,
-				2A5246F41869F81300C8FCD5 /* MADEmailer.m */,
 				2A119AF3174336AE003DAA85 /* MADImage.h */,
 				2A119AF4174336AE003DAA85 /* MADImage.m */,
-				2A0641B818C6257100E6B2FD /* MADOverlayView.h */,
-				2A0641B918C6257100E6B2FD /* MADOverlayView.m */,
-				2AEA644E18595674009821B8 /* MADPickerWheel.h */,
-				2AEA644F18595674009821B8 /* MADPickerWheel.m */,
-				2A119AF917433D02003DAA85 /* MADUIView.h */,
-				2A119AFA17433D02003DAA85 /* MADUIView.m */,
 			);
-			name = imagesAndViews;
+			name = images;
 			sourceTree = "<group>";
 		};
 		2A119AF2174335A2003DAA85 /* src */ = {
@@ -252,8 +269,9 @@
 				2AB9DCA5173AA2B20027163F /* categories */,
 				2A119AEA17433451003DAA85 /* files */,
 				2A02A6EB188D8DD300E4E0E6 /* gamecenter */,
-				2A119AEE17433577003DAA85 /* imagesAndViews */,
+				2A119AEE17433577003DAA85 /* images */,
 				2A119ADB17432C32003DAA85 /* math */,
+				2A06420E18C62FA800E6B2FD /* views */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -490,12 +508,14 @@
 				2A946065183D03E200427E31 /* MADDirectionView.m in Sources */,
 				2A119AF5174336AE003DAA85 /* MADImage.m in Sources */,
 				2A119AF817433C38003DAA85 /* MADCollisionDetect.m in Sources */,
+				2A06421618C632F300E6B2FD /* MADAppDelegateHelper.m in Sources */,
 				2A119AFB17433D02003DAA85 /* MADUIView.m in Sources */,
 				2A119AFF17433DFE003DAA85 /* PathFinderExhaustive.m in Sources */,
 				2A119B0217433E43003DAA85 /* PathFinder.m in Sources */,
 				2A119B0517434224003DAA85 /* UIColor+MAD.m in Sources */,
 				2A119B08174342B5003DAA85 /* PerlinNoise.m in Sources */,
 				2A119B0D17434353003DAA85 /* QuadTile.m in Sources */,
+				2A06421118C6301E00E6B2FD /* MADBannerViewController.m in Sources */,
 				2AC4DC7D1746711D0088B062 /* MADHexBoard.m in Sources */,
 				2AC4DC80174672050088B062 /* MADBoardIndexPath.m in Sources */,
 				2A45CFE917612DDC000DD91E /* UIScreen+MAD.m in Sources */,

@@ -6,5 +6,6 @@
     #import <Foundation/Foundation.h>
     #import <Foundation/Foundation.h>
     #import <CoreGraphics/CoreGraphics.h>
+    #import "madlib.h"
 #endif
 
