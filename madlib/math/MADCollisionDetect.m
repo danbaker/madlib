@@ -81,4 +81,36 @@
     return NO;
 }
 
+
++(bool)detectCollisionCircleAt:(CGPoint)circle radius:(CGFloat)radius trianglePoint1:(CGPoint)point1 point2:(CGPoint)point2 point3:(CGPoint)point3;
+{
+    CGFloat radiusSquared = radius * radius;
+    // Test 1: is any vertex in the circle (also covers the case of the entire triangle being within the circle)
+    if ([self distSquaredFromPoint:circle point:point1] <= radiusSquared) return YES;
+    if ([self distSquaredFromPoint:circle point:point2] <= radiusSquared) return YES;
+    if ([self distSquaredFromPoint:circle point:point3] <= radiusSquared) return YES;
+    // Test 2: is the circle center within the triangle
+    
+    // Test 3: does circle intersect any edge
+    return NO;
+}
+
++ (bool)detectCollisionPointAt:(CGPoint)p trianglePoint1:(CGPoint)p0 point2:(CGPoint)p1 point3:(CGPoint)p2;
+{
+    CGFloat s = p0.y * p2.x - p0.x * p2.y + (p2.y - p0.y) * p.x + (p0.x - p2.x) * p.y;
+    CGFloat t = p0.x * p1.y - p0.y * p1.x + (p0.y - p1.y) * p.x + (p1.x - p0.x) * p.y;
+    
+    if ((s < 0) != (t < 0))
+        return NO;
+    
+    CGFloat A = -p1.y * p2.x + p0.y * (p2.x - p1.x) + p0.x * (p1.y - p2.y) + p1.x * p2.y;
+    if (A < 0.0)
+    {
+        s = -s;
+        t = -t;
+        A = -A;
+    }
+    return s > 0 && t > 0 && (s + t) < A;
+}
+
 @end

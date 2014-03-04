@@ -5,7 +5,7 @@
 //  Created by Dan Baker on 12/24/13.
 //  Copyright (c) 2013 BakerCrew. All rights reserved.
 //
-
+#ifdef MAD_INCLUDE_EMAILER
 #import "MADEmailer.h"
 
 @interface MADEmailer ()
@@ -56,3 +56,5 @@
 }
 
 @end
+#endif
+

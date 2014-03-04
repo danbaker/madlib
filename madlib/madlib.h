@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+//#define MAD_INCLUDE_EMAILER
+
 // boards
 #import "MAD2DBoard.h"
 #import "MADBoardIndexPath.h"
@@ -39,6 +41,7 @@
 #import "MADDirectionView.h"
 #import "MADPickerWheel.h"
 #import "MADEmailer.h"
+#import "MADOverlayView.h"
 
 // math
 #import "MADCollisionDetect.h"

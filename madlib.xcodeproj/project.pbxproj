@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2A02A6F1188D8E1E00E4E0E6 /* MADTurnBasedMatchHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A02A6F0188D8E1E00E4E0E6 /* MADTurnBasedMatchHelper.m */; };
+		2A0641BA18C6257100E6B2FD /* MADOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0641B918C6257100E6B2FD /* MADOverlayView.m */; };
 		2A119ADE17432C44003DAA85 /* MADVector.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A119ADD17432C44003DAA85 /* MADVector.m */; };
 		2A119AE117432C92003DAA85 /* MADRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A119AE017432C92003DAA85 /* MADRandom.m */; };
 		2A119AE817432F54003DAA85 /* MADLines.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A119AE517432F54003DAA85 /* MADLines.m */; };
@@ -77,6 +78,8 @@
 /* Begin PBXFileReference section */
 		2A02A6EF188D8E1E00E4E0E6 /* MADTurnBasedMatchHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MADTurnBasedMatchHelper.h; path = gamecenter/MADTurnBasedMatchHelper.h; sourceTree = "<group>"; };
 		2A02A6F0188D8E1E00E4E0E6 /* MADTurnBasedMatchHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MADTurnBasedMatchHelper.m; path = gamecenter/MADTurnBasedMatchHelper.m; sourceTree = "<group>"; };
+		2A0641B818C6257100E6B2FD /* MADOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MADOverlayView.h; path = images/MADOverlayView.h; sourceTree = "<group>"; };
+		2A0641B918C6257100E6B2FD /* MADOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MADOverlayView.m; path = images/MADOverlayView.m; sourceTree = "<group>"; };
 		2A119ADC17432C44003DAA85 /* MADVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MADVector.h; path = math/MADVector.h; sourceTree = "<group>"; };
 		2A119ADD17432C44003DAA85 /* MADVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MADVector.m; path = math/MADVector.m; sourceTree = "<group>"; };
 		2A119ADF17432C92003DAA85 /* MADRandom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MADRandom.h; path = math/MADRandom.h; sourceTree = "<group>"; };
@@ -232,6 +235,8 @@
 				2A5246F41869F81300C8FCD5 /* MADEmailer.m */,
 				2A119AF3174336AE003DAA85 /* MADImage.h */,
 				2A119AF4174336AE003DAA85 /* MADImage.m */,
+				2A0641B818C6257100E6B2FD /* MADOverlayView.h */,
+				2A0641B918C6257100E6B2FD /* MADOverlayView.m */,
 				2AEA644E18595674009821B8 /* MADPickerWheel.h */,
 				2AEA644F18595674009821B8 /* MADPickerWheel.m */,
 				2A119AF917433D02003DAA85 /* MADUIView.h */,
@@ -466,6 +471,7 @@
 			files = (
 				2AEA645418597780009821B8 /* AGWindowView.m in Sources */,
 				2A02A6F1188D8E1E00E4E0E6 /* MADTurnBasedMatchHelper.m in Sources */,
+				2A0641BA18C6257100E6B2FD /* MADOverlayView.m in Sources */,
 				2A91A61617317394007E9FCE /* madlib.m in Sources */,
 				2AB9DCAC173AA2FD0027163F /* NSArray+MAD.m in Sources */,
 				2AB326EC1829FDE300F20947 /* MADArrow.m in Sources */,
