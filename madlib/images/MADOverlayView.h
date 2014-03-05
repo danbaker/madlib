@@ -11,9 +11,8 @@
 #import <UIKit/UIKit.h>
 
 @interface MADOverlayView : UIView
-@property (nonatomic, retain, readonly) UIView *baseView;
 
-- (id)initOnWindow:(UIWindow*)window;
+- (id)initWithWindow:(UIWindow*)window;
 
 - (void)viewChangedSize;
 

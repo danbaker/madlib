@@ -13,27 +13,28 @@
 
 
 @interface MADOverlayView ()
-@property (nonatomic, retain) UIView *baseView;
+@property (nonatomic, retain) UIView *stationaryView;   // resizes during rotation events.  child of window
+                                                        // self is-a child of stationaryView
 @end
 
 
 @implementation MADOverlayView
 
-- (id)initOnWindow:(UIWindow*)window
+- (id)initWithWindow:(UIWindow*)window
 {
     CGRect frame = [UIScreen boundsForOrientation:UIInterfaceOrientationPortrait];
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        self.backgroundColor = [UIColor clearColor];
-        [window addSubview:self];
-
+        self.stationaryView = [[UIView alloc] initWithFrame:frame];
+        self.stationaryView.backgroundColor = [UIColor clearColor];
+        [window addSubview:self.stationaryView];
+        
+        
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(statusBarFrameOrOrientationChanged:) name:UIApplicationDidChangeStatusBarOrientationNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(statusBarFrameOrOrientationChanged:) name:UIApplicationDidChangeStatusBarFrameNotification object:nil];
 
-        self.baseView = [[UIView alloc] init];
-        self.baseView.backgroundColor = [UIColor clearColor];
-        [self addSubview:self.baseView];
+        [self.stationaryView addSubview:self];
         // Note: brief delay to allow for the window size to be correct (else in iOS6 the window isn't tall enough)
         [self performBlock:^{
             [self rotateAccordingToStatusBarOrientationAndSupportedOrientations];
@@ -47,6 +48,11 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+- (void)removeFromSuperview
+{
+    [super removeFromSuperview];                // remove self from stationaryView
+    [self.stationaryView removeFromSuperview];  // remove stationaryView from the Window
+}
 
 #pragma mark Rotation Handling
 
@@ -59,14 +65,14 @@
 {
     UIInterfaceOrientation statusBarOrientation = [UIApplication sharedApplication].statusBarOrientation;
     CGFloat angle = [MADOverlayView UIInterfaceOrientationAngleOfOrientation:statusBarOrientation];
-    CGFloat statusBarHeight = [[self class] getStatusBarHeight];
+    CGFloat statusBarHeight = [MADOverlayView getStatusBarHeight];
     
     CGAffineTransform transform = CGAffineTransformMakeRotation(angle);
     CGRect frame = [[self class] rectInWindowBounds:self.window.bounds statusBarOrientation:statusBarOrientation statusBarHeight:statusBarHeight];
     
     [self setIfNotEqualTransform:transform frame:frame];
     
-    frame = self.frame;
+    frame = self.stationaryView.frame;
     switch (statusBarOrientation)
     {
         default:
@@ -80,27 +86,27 @@
             t.size.width = frame.size.height;
             frame = t;
         }
-            break;
+        break;
     }
     frame.origin = CGPointZero;
-    self.baseView.frame = frame;
+    self.frame = frame;
     [self viewChangedSize];
 }
 
 - (void)viewChangedSize
 {
-    NSLog(@"Programmer should overview MADOverlayView.viewChangedSize");
+    NSLog(@"Programmer should overload MADOverlayView.viewChangedSize -- or just watch when their frame changes size");
 }
 
 - (void)setIfNotEqualTransform:(CGAffineTransform)transform frame:(CGRect)frame
 {
-    if(!CGAffineTransformEqualToTransform(self.transform, transform))
+    if(!CGAffineTransformEqualToTransform(self.stationaryView.transform, transform))
     {
-        self.transform = transform;
+        self.stationaryView.transform = transform;
     }
-    if(!CGRectEqualToRect(self.frame, frame))
+    if(!CGRectEqualToRect(self.stationaryView.frame, frame))
     {
-        self.frame = frame;
+        self.stationaryView.frame = frame;
     }
 }
 

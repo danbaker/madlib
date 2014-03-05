@@ -8,8 +8,8 @@
 
 #import "MADBannerViewController.h"
 
-NSString * const BannerViewActionWillBegin = @"BannerViewActionWillBegin";
-NSString * const BannerViewActionDidFinish = @"BannerViewActionDidFinish";
+NSString * const MADBannerViewActionWillBegin = @"BannerViewActionWillBegin";
+NSString * const MADBannerViewActionDidFinish = @"BannerViewActionDidFinish";
 
 @interface MADBannerViewController ()  <ADBannerViewDelegate>
 
@@ -141,13 +141,13 @@ NSString * const BannerViewActionDidFinish = @"BannerViewActionDidFinish";
 
 - (BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave
 {
-    [[NSNotificationCenter defaultCenter] postNotificationName:BannerViewActionWillBegin object:self];
+    [[NSNotificationCenter defaultCenter] postNotificationName:MADBannerViewActionWillBegin object:self];
     return YES;
 }
 
 - (void)bannerViewActionDidFinish:(ADBannerView *)banner
 {
-    [[NSNotificationCenter defaultCenter] postNotificationName:BannerViewActionDidFinish object:self];
+    [[NSNotificationCenter defaultCenter] postNotificationName:MADBannerViewActionDidFinish object:self];
 }
 
 @end

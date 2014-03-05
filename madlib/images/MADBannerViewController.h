@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <iAd/iAd.h>
 
-extern NSString * const BannerViewActionWillBegin;
-extern NSString * const BannerViewActionDidFinish;
+extern NSString * const MADBannerViewActionWillBegin;
+extern NSString * const MADBannerViewActionDidFinish;
 
 
 @interface MADBannerViewController : UIViewController
