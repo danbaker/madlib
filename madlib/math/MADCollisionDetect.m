@@ -81,7 +81,7 @@
     return NO;
 }
 
-
+// NOTE: The triangle points must be in clockwise order
 +(bool)detectCollisionCircleAt:(CGPoint)circle radius:(CGFloat)radius trianglePoint1:(CGPoint)point1 point2:(CGPoint)point2 point3:(CGPoint)point3;
 {
     CGFloat radiusSquared = radius * radius;
@@ -89,9 +89,24 @@
     if ([self distSquaredFromPoint:circle point:point1] <= radiusSquared) return YES;
     if ([self distSquaredFromPoint:circle point:point2] <= radiusSquared) return YES;
     if ([self distSquaredFromPoint:circle point:point3] <= radiusSquared) return YES;
+    
     // Test 2: is the circle center within the triangle
+    CGFloat v1x = point1.x;
+    CGFloat v1y = point1.y;
+    CGFloat v2x = point2.x;
+    CGFloat v2y = point2.y;
+    CGFloat v3x = point3.x;
+    CGFloat v3y = point3.y;
+    if (((v2y - v1y)*(circle.x - v1x) - (v2x - v1x)*(circle.y - v1y)) >= 0  &&
+        ((v3y - v2y)*(circle.x - v2x) - (v3x - v2x)*(circle.y - v2y)) >= 0  &&
+        ((v1y - v3y)*(circle.x - v3x) - (v1x - v3x)*(circle.x - v3x)) >= 0)
+        return YES;
     
     // Test 3: does circle intersect any edge
+    if ([self detectCollisionCircleAt:circle radius:radius lineStart:point1 lineEnd:point2]) return YES;
+    if ([self detectCollisionCircleAt:circle radius:radius lineStart:point2 lineEnd:point3]) return YES;
+    if ([self detectCollisionCircleAt:circle radius:radius lineStart:point3 lineEnd:point1]) return YES;
+    
     return NO;
 }
 

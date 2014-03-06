@@ -14,6 +14,8 @@
 
 +(bool)detectCollisionCircleAt:(CGPoint)point1 radius:(CGFloat)radius1 circleAt:(CGPoint)point2 radius:(CGFloat)radius2;
 +(bool)detectCollisionCircleAt:(CGPoint)circle radius:(CGFloat)radius lineStart:(CGPoint)point1 lineEnd:(CGPoint)point2;
+
+// NOTE: The triangle points must be in clockwise order
 +(bool)detectCollisionCircleAt:(CGPoint)circle radius:(CGFloat)radius trianglePoint1:(CGPoint)point1 point2:(CGPoint)point2 point3:(CGPoint)point3;
 
 @end

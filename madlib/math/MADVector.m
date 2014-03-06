@@ -12,6 +12,13 @@
 {
 }
 
+static BOOL vectorAngleIsCounterClockwise = NO;
+
++ (void)setAngleDirectionToCounterClockwise:(BOOL)counterClockwise;
+{
+    vectorAngleIsCounterClockwise = counterClockwise;
+}
+
 - (id)initAngle:(CGFloat)angleQ length:(CGFloat)lengthQ;
 {
     if (!(self = [self init])) return nil;
@@ -77,6 +84,10 @@
         } else {
             length = sqrtf(x*x + y*y);
             angle = atan2(y, x);
+            if (vectorAngleIsCounterClockwise)
+            {
+                angle = -angle;
+            }
             polarIsValid = YES;
         }
     }
@@ -89,6 +100,10 @@
         } else {
             x = length * cos(angle);
             y = length * sin(angle);
+            if (vectorAngleIsCounterClockwise)
+            {
+                y = -y;
+            }
             rectangularIsValid = YES;
         }
     }

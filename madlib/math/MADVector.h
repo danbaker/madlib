@@ -21,6 +21,8 @@
     CGFloat length;
 }
 
++ (void)setAngleDirectionToCounterClockwise:(BOOL)counterClockwise;
+
 - (id)initAngle:(CGFloat)angle length:(CGFloat)length;
 - (id)initX:(CGFloat)x y:(CGFloat)y;
 - (id)initPointA:(CGPoint)point1 pointB:(CGPoint)point2;
