@@ -58,6 +58,16 @@
     return defaultValue;
 }
 
+- (CGPoint) pointForKey:(NSString*)key defaultsTo:(CGPoint)defaultValue
+{
+    NSValue *value = [self objectForKey:key];
+    if ([value isKindOfClass:[NSValue class]])
+    {
+        return [value CGPointValue];
+    }
+    return defaultValue;
+}
+
 - (NSNumber*) numberForKey:(NSString*)key defaultsTo:(NSNumber*)defaultValue
 {
     id value = [self objectForKey:key];

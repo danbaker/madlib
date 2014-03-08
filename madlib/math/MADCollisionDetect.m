@@ -3,7 +3,7 @@
 //  HexGrid
 //
 //  Created by Dan Baker on 11/8/12.
-//  Copyright (c) 2012 Mark Hamilton. All rights reserved.
+//  Copyright (c) 2012 BakerCrew. All rights reserved.
 //
 
 #import "MADCollisionDetect.h"
@@ -126,6 +126,42 @@
         A = -A;
     }
     return s > 0 && t > 0 && (s + t) < A;
+}
+
++ (bool)detectCollisionTrianglePoint1:(CGPoint)p0 point2:(CGPoint)p1 point3:(CGPoint)p2 withTrianglePoint1:(CGPoint)t0 point2:(CGPoint)t1 point3:(CGPoint)t2;
+{
+    return NO;
+}
+
+
+// http://community.topcoder.com/tc?module=Static&d1=tutorials&d2=geometry2#line_line_intersection
++ (BOOL) detectCollisionLineAFromPoint1:(CGPoint)p1 toPoint2:(CGPoint)p2 withLineBFromPoint3:(CGPoint)p3 toPoint4:(CGPoint)p4 returnCollision:(CGPoint*)pPoint;
+{
+    CGFloat line1_A = p2.y - p1.y;
+    CGFloat line1_B = p1.x - p2.x;
+    CGFloat line1_C = line1_A * p1.x + line1_B * p1.y;
+    
+    CGFloat line2_A = p4.y - p3.y;
+    CGFloat line2_B = p3.x - p4.x;
+    CGFloat line2_C = line2_A * p3.x + line2_B * p3.y;
+    
+    CGFloat det = line1_A*line2_B - line2_A*line1_B;
+    if(det == 0)
+    {
+        return NO;
+    }
+    CGFloat x = (line2_B*line1_C - line1_B*line2_C) / det;
+    CGFloat y = (line1_A*line2_C - line2_A*line1_C) / det;
+    
+    if (MIN(p1.x,p2.x) <=x && x <= MAX(p1.x,p2.x) && MIN(p1.y,p2.y) <= y && y <= MAX(p1.y,p2.y))
+    {
+        if (MIN(p3.x,p4.x) <=x && x <= MAX(p3.x,p4.x) && MIN(p3.y,p4.y) <= y && y <= MAX(p3.y,p4.y))
+        {
+            *pPoint = CGPointMake(x,y);
+            return YES;
+        }
+    }
+    return NO;
 }
 
 @end

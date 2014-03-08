@@ -14,6 +14,8 @@
 - (NSInteger)integerForKey:(NSString*)key defaultValue:(NSInteger)defaultValue;
 - (NSString*)stringForKey:(NSString*)key defaultValue:(NSString*)defaultValue;
 - (BOOL)boolForKey:(NSString*)key defaultsTo:(BOOL)defaultValue;
+- (CGPoint)pointForKey:(NSString*)key defaultsTo:(CGPoint)defaultValue;
+
 - (NSNumber*)numberForKey:(NSString*)key defaultsTo:(NSNumber*)defaultValue;
 - (NSArray*)arrayForKey:(NSString*)key defaultsTo:(NSArray*)defaultValue;
 - (NSDate*)dateForKey:(NSString*)key defaultsTo:(NSDate*)defaultValue;
