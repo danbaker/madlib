@@ -27,6 +27,9 @@
 #import "UIColor+MAD.h"
 #import "UIScreen+MAD.h"
 
+// core graphics
+#import "MADPainter.h"
+
 // files
 #import "MADFileSystem.h"
 
@@ -38,6 +41,7 @@
 #import "MADArrow.h"
 
 // math
+#import "MADCircle.h"
 #import "MADCollisionDetect.h"
 #import "MADLines.h"
 #import "MADMutableVector.h"

@@ -50,6 +50,8 @@
 		2AB9DCB7173AA31B0027163F /* NSJSONSerializationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB9DCB6173AA31B0027163F /* NSJSONSerializationTests.m */; };
 		2AC4DC7D1746711D0088B062 /* MADHexBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC4DC7C1746711D0088B062 /* MADHexBoard.m */; };
 		2AC4DC80174672050088B062 /* MADBoardIndexPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC4DC7F174672050088B062 /* MADBoardIndexPath.m */; };
+		2AE6C63618CB670700255DD9 /* MADCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE6C63518CB670700255DD9 /* MADCircle.m */; };
+		2AE6C63A18CB6BE300255DD9 /* MADPainter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE6C63918CB6BE300255DD9 /* MADPainter.m */; };
 		2AEA645018595674009821B8 /* MADPickerWheel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEA644F18595674009821B8 /* MADPickerWheel.m */; };
 		2AEA645418597780009821B8 /* AGWindowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEA645218597780009821B8 /* AGWindowView.m */; };
 /* End PBXBuildFile section */
@@ -156,6 +158,10 @@
 		2AC4DC7C1746711D0088B062 /* MADHexBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MADHexBoard.m; path = boards/MADHexBoard.m; sourceTree = "<group>"; };
 		2AC4DC7E174672050088B062 /* MADBoardIndexPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MADBoardIndexPath.h; path = boards/MADBoardIndexPath.h; sourceTree = "<group>"; };
 		2AC4DC7F174672050088B062 /* MADBoardIndexPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MADBoardIndexPath.m; path = boards/MADBoardIndexPath.m; sourceTree = "<group>"; };
+		2AE6C63418CB670700255DD9 /* MADCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MADCircle.h; path = math/MADCircle.h; sourceTree = "<group>"; };
+		2AE6C63518CB670700255DD9 /* MADCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MADCircle.m; path = math/MADCircle.m; sourceTree = "<group>"; };
+		2AE6C63818CB6BE300255DD9 /* MADPainter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MADPainter.h; path = coregraphics/MADPainter.h; sourceTree = "<group>"; };
+		2AE6C63918CB6BE300255DD9 /* MADPainter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MADPainter.m; path = coregraphics/MADPainter.m; sourceTree = "<group>"; };
 		2AEA644E18595674009821B8 /* MADPickerWheel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MADPickerWheel.h; path = images/MADPickerWheel.h; sourceTree = "<group>"; };
 		2AEA644F18595674009821B8 /* MADPickerWheel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MADPickerWheel.m; path = images/MADPickerWheel.m; sourceTree = "<group>"; };
 		2AEA645118597780009821B8 /* AGWindowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGWindowView.h; path = images/AGWindowView.h; sourceTree = "<group>"; };
@@ -238,6 +244,8 @@
 				2A119ADD17432C44003DAA85 /* MADVector.m */,
 				2A119B06174342B5003DAA85 /* PerlinNoise.h */,
 				2A119B07174342B5003DAA85 /* PerlinNoise.m */,
+				2AE6C63418CB670700255DD9 /* MADCircle.h */,
+				2AE6C63518CB670700255DD9 /* MADCircle.m */,
 			);
 			name = math;
 			sourceTree = "<group>";
@@ -265,6 +273,7 @@
 		2A119AF2174335A2003DAA85 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				2AE6C63718CB6BB200255DD9 /* coregraphics */,
 				2A119AFC17433DED003DAA85 /* boards */,
 				2AB9DCA5173AA2B20027163F /* categories */,
 				2A119AEA17433451003DAA85 /* files */,
@@ -389,6 +398,15 @@
 			name = categories;
 			sourceTree = "<group>";
 		};
+		2AE6C63718CB6BB200255DD9 /* coregraphics */ = {
+			isa = PBXGroup;
+			children = (
+				2AE6C63818CB6BE300255DD9 /* MADPainter.h */,
+				2AE6C63918CB6BE300255DD9 /* MADPainter.m */,
+			);
+			name = coregraphics;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -499,6 +517,7 @@
 				2AB326EF182A915100F20947 /* MADArrowView.m in Sources */,
 				2AB9DCB3173AA3080027163F /* NSMutableDictionary+MAD.m in Sources */,
 				2AB9DCB4173AA3080027163F /* NSObject+MAD.m in Sources */,
+				2AE6C63618CB670700255DD9 /* MADCircle.m in Sources */,
 				2A119ADE17432C44003DAA85 /* MADVector.m in Sources */,
 				2AEA645018595674009821B8 /* MADPickerWheel.m in Sources */,
 				2A119AE117432C92003DAA85 /* MADRandom.m in Sources */,
@@ -510,6 +529,7 @@
 				2A119AF817433C38003DAA85 /* MADCollisionDetect.m in Sources */,
 				2A06421618C632F300E6B2FD /* MADAppDelegateHelper.m in Sources */,
 				2A119AFB17433D02003DAA85 /* MADUIView.m in Sources */,
+				2AE6C63A18CB6BE300255DD9 /* MADPainter.m in Sources */,
 				2A119AFF17433DFE003DAA85 /* PathFinderExhaustive.m in Sources */,
 				2A119B0217433E43003DAA85 /* PathFinder.m in Sources */,
 				2A119B0517434224003DAA85 /* UIColor+MAD.m in Sources */,
