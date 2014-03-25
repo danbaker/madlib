@@ -135,7 +135,7 @@
 
 
 // http://community.topcoder.com/tc?module=Static&d1=tutorials&d2=geometry2#line_line_intersection
-+ (BOOL) detectCollisionLineAFromPoint1:(CGPoint)p1 toPoint2:(CGPoint)p2 withLineBFromPoint3:(CGPoint)p3 toPoint4:(CGPoint)p4 returnCollision:(CGPoint*)pPoint;
++ (BOOL) detectCollisionLineAWithNoEndsFromPoint1:(CGPoint)p1 toPoint2:(CGPoint)p2 withLineBFromPoint3:(CGPoint)p3 toPoint4:(CGPoint)p4 returnCollision:(CGPoint*)pPoint;
 {
     CGFloat line1_A = p2.y - p1.y;
     CGFloat line1_B = p1.x - p2.x;
@@ -152,16 +152,29 @@
     }
     CGFloat x = (line2_B*line1_C - line1_B*line2_C) / det;
     CGFloat y = (line1_A*line2_C - line2_A*line1_C) / det;
-    
-    if (MIN(p1.x,p2.x) <=x && x <= MAX(p1.x,p2.x) && MIN(p1.y,p2.y) <= y && y <= MAX(p1.y,p2.y))
+    if (pPoint)
     {
-        if (MIN(p3.x,p4.x) <=x && x <= MAX(p3.x,p4.x) && MIN(p3.y,p4.y) <= y && y <= MAX(p3.y,p4.y))
+        *pPoint = CGPointMake(x,y);
+    }
+    return YES;
+}
+    
++ (BOOL) detectCollisionLineAFromPoint1:(CGPoint)p1 toPoint2:(CGPoint)p2 withLineBFromPoint3:(CGPoint)p3 toPoint4:(CGPoint)p4 returnCollision:(CGPoint*)pPoint;
+{
+    CGPoint p;
+    if ([self detectCollisionLineAWithNoEndsFromPoint1:p1 toPoint2:p2 withLineBFromPoint3:p3 toPoint4:p4 returnCollision:&p])
+    {
+        if (MIN(p1.x,p2.x) <= p.x && p.x <= MAX(p1.x,p2.x) && MIN(p1.y,p2.y) <= p.y && p.y <= MAX(p1.y,p2.y))
         {
-            *pPoint = CGPointMake(x,y);
-            return YES;
+            if (MIN(p3.x,p4.x) <= p.x && p.x <= MAX(p3.x,p4.x) && MIN(p3.y,p4.y) <= p.y && p.y <= MAX(p3.y,p4.y))
+            {
+                if (pPoint) *pPoint = p;
+                return YES;
+            }
         }
     }
     return NO;
 }
 
 @end
+

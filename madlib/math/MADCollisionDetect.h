@@ -19,6 +19,7 @@
 +(bool)detectCollisionCircleAt:(CGPoint)circle radius:(CGFloat)radius trianglePoint1:(CGPoint)point1 point2:(CGPoint)point2 point3:(CGPoint)point3;
 +(bool)detectCollisionPointAt:(CGPoint)p trianglePoint1:(CGPoint)p0 point2:(CGPoint)p1 point3:(CGPoint)p2;
 
++ (BOOL) detectCollisionLineAWithNoEndsFromPoint1:(CGPoint)p1 toPoint2:(CGPoint)p2 withLineBFromPoint3:(CGPoint)p3 toPoint4:(CGPoint)p4 returnCollision:(CGPoint*)pPoint;
 + (BOOL) detectCollisionLineAFromPoint1:(CGPoint)p1 toPoint2:(CGPoint)p2 withLineBFromPoint3:(CGPoint)p3 toPoint4:(CGPoint)p4 returnCollision:(CGPoint*)pPoint;
 
 @end

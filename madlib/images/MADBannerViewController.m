@@ -12,7 +12,7 @@ NSString * const MADBannerViewActionWillBegin = @"BannerViewActionWillBegin";
 NSString * const MADBannerViewActionDidFinish = @"BannerViewActionDidFinish";
 
 @interface MADBannerViewController ()  <ADBannerViewDelegate>
-
+@property (nonatomic, retain) UIView *statusBarBackgroundView;
 @end
 
 @implementation MADBannerViewController{
@@ -51,8 +51,25 @@ NSString * const MADBannerViewActionDidFinish = @"BannerViewActionDidFinish";
     [self addChildViewController:_contentController];
     [contentView addSubview:_contentController.view];
     [_contentController didMoveToParentViewController:self];
-    
+
+    // Create a background view for the status bar (used when the ad is at the top)
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7)
+    {
+        CGRect fr = CGRectMake(0,0,1024,20);
+        self.statusBarBackgroundView = [[UIView alloc] initWithFrame:fr];
+        self.statusBarBackgroundView.backgroundColor = self.adPlacedAtTop? [UIColor whiteColor] : [UIColor clearColor];
+        [contentView addSubview:self.statusBarBackgroundView];
+    }
+
     self.view = contentView;
+}
+
+- (void)setAdPlacedAtTop:(BOOL)adPlacedAtTop
+{
+    _adPlacedAtTop = adPlacedAtTop;
+    self.statusBarBackgroundView.backgroundColor = adPlacedAtTop? [UIColor whiteColor] : [UIColor clearColor];
+    [self.view setNeedsLayout];
+    [self.view layoutIfNeeded];
 }
 
 #if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_6_0
@@ -78,7 +95,8 @@ NSString * const MADBannerViewActionDidFinish = @"BannerViewActionDidFinish";
     // from the banner view.
     // (See the comments in -bannerViewDidLoadAd: and -bannerView:didFailToReceiveAdWithError:)
     
-    CGRect contentFrame = self.view.bounds, bannerFrame = CGRectZero;
+    CGRect contentFrame = self.view.bounds;
+    CGRect bannerFrame = CGRectZero;
 #if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_6_0
     // If configured to support iOS <6.0, then we need to set the currentContentSizeIdentifier in order to resize the banner properly.
     // This continues to work on iOS 6.0, so we won't need to do anything further to resize the banner.
@@ -97,11 +115,23 @@ NSString * const MADBannerViewActionDidFinish = @"BannerViewActionDidFinish";
     
     // Check if the banner has an ad loaded and ready for display.  Move the banner off
     // screen if it does not have an ad.
+    CGFloat bannerHeight = bannerFrame.size.height;
     if (_bannerView.bannerLoaded) {
-        contentFrame.size.height -= bannerFrame.size.height;
-        bannerFrame.origin.y = contentFrame.size.height;
+        if (self.adPlacedAtTop) {
+            CGFloat statusBarHeight = [UIScreen statusBarHeight];
+            bannerFrame.origin.y = statusBarHeight;
+            contentFrame.origin.y += bannerHeight + statusBarHeight;
+            contentFrame.size.height -= bannerHeight + statusBarHeight;
+        } else {
+            contentFrame.size.height -= bannerHeight;
+            bannerFrame.origin.y = contentFrame.size.height;
+        }
     } else {
-        bannerFrame.origin.y = contentFrame.size.height;
+        if (self.adPlacedAtTop) {
+            bannerFrame.origin.y = -bannerHeight;
+        } else {
+            bannerFrame.origin.y = contentFrame.size.height;
+        }
     }
     _contentController.view.frame = contentFrame;
     _bannerView.frame = bannerFrame;

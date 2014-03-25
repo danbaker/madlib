@@ -13,6 +13,7 @@
 + (CGRect)boundsForCurrentOrientation;
 + (CGRect)boundsForOrientation:(UIInterfaceOrientation)orientation;
 + (UIInterfaceOrientation)deviceOrientation;
++ (CGFloat)statusBarHeight;
 
 + (void)addToWindowTheView:(UIView*)view;
 

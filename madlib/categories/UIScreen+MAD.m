@@ -41,6 +41,14 @@
     return UIApplication.sharedApplication.statusBarOrientation;
 }
 
++ (CGFloat) statusBarHeight
+{
+    CGSize statusBarSize = [[UIApplication sharedApplication] statusBarFrame].size;
+    return MIN(statusBarSize.width, statusBarSize.height);
+}
+
+
+
 + (void)addToWindowTheView:(UIView*)view
 {
 //    ((AppDelegate)UIApplication.SharedApplication.Delegate).Window.RootViewController.Add(view);

@@ -16,4 +16,7 @@
 + (CGFloat)angleInRadsOfLineBetweenPointA:(CGPoint)pointA pointB:(CGPoint)pointB;
 + (CGFloat)angleInRadsOfLineBetweenScreenPointA:(CGPoint)pointA pointB:(CGPoint)pointB;
 
++ (CGFloat)distanceBetweenPointA:(CGPoint)pointA pointB:(CGPoint)pointB;
++ (CGFloat)distanceSquaredBetweenPointA:(CGPoint)pointA pointB:(CGPoint)pointB;
+
 @end

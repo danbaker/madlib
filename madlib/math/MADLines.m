@@ -38,4 +38,15 @@
     return -[self angleInRadsOfLineBetweenPointA:pointA pointB:pointB];
 }
 
++ (CGFloat)distanceBetweenPointA:(CGPoint)pointA pointB:(CGPoint)pointB;
+{
+    return sqrtf([self distanceSquaredBetweenPointA:pointA pointB:pointB]);
+}
+
++ (CGFloat)distanceSquaredBetweenPointA:(CGPoint)pointA pointB:(CGPoint)pointB;
+{
+    CGFloat xDiff = pointB.x - pointA.x;
+    CGFloat yDiff = pointB.y - pointA.y;
+    return xDiff*xDiff + yDiff*yDiff;
+}
 @end
