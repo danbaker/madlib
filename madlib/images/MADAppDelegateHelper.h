@@ -13,6 +13,7 @@
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic, retain) UINavigationController *navController;
 @property (nonatomic, assign) BOOL adPlacedAtTop;
+@property (nonatomic, assign) BOOL keepAdRectangleReserved;
 
 
 - (void)buildMainWindowWithAdsUsingViewController:(UIViewController*)startViewController;

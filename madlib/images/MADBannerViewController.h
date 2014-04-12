@@ -16,6 +16,7 @@ extern NSString * const MADBannerViewActionDidFinish;
 @interface MADBannerViewController : UIViewController
 
 @property (nonatomic, assign) BOOL adPlacedAtTop;   // YES means: place the ad view at the top
+@property (nonatomic, assign) BOOL keepAdRectangleReserved;
 
 - (instancetype)initWithContentViewController:(UIViewController *)contentController;
 

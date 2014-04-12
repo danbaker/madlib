@@ -16,6 +16,7 @@
 
 @implementation MADAppDelegateHelper
 
+
 - (void)buildMainWindowWithAdsUsingViewController:(UIViewController*)startViewController
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -24,6 +25,7 @@
 	
 	MADBannerViewController * bannerViewController = [[MADBannerViewController alloc] initWithContentViewController:self.navController];
     bannerViewController.adPlacedAtTop = self.adPlacedAtTop;
+    bannerViewController.keepAdRectangleReserved = self.keepAdRectangleReserved;
     self.window.rootViewController = bannerViewController;
     self.bannerViewController = bannerViewController;
 	
@@ -34,6 +36,12 @@
 {
     _adPlacedAtTop = adPlacedAtTop;
     self.bannerViewController.adPlacedAtTop = adPlacedAtTop;
+}
+
+- (void)setKeepAdRectangleReserved:(BOOL)keepAdRectangleReserved
+{
+    _keepAdRectangleReserved = keepAdRectangleReserved;
+    self.bannerViewController.keepAdRectangleReserved = keepAdRectangleReserved;
 }
 
 @end

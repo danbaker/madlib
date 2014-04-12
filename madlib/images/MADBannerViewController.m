@@ -72,6 +72,13 @@ NSString * const MADBannerViewActionDidFinish = @"BannerViewActionDidFinish";
     [self.view layoutIfNeeded];
 }
 
+- (void)setKeepAdRectangleReserved:(BOOL)keepAdRectangleReserved
+{
+    _keepAdRectangleReserved = keepAdRectangleReserved;
+    [self.view setNeedsLayout];
+    [self.view layoutIfNeeded];
+}
+
 #if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_6_0
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
@@ -116,7 +123,7 @@ NSString * const MADBannerViewActionDidFinish = @"BannerViewActionDidFinish";
     // Check if the banner has an ad loaded and ready for display.  Move the banner off
     // screen if it does not have an ad.
     CGFloat bannerHeight = bannerFrame.size.height;
-    if (_bannerView.bannerLoaded) {
+    if (_bannerView.bannerLoaded || self.keepAdRectangleReserved) {
         if (self.adPlacedAtTop) {
             CGFloat statusBarHeight = [UIScreen statusBarHeight];
             bannerFrame.origin.y = statusBarHeight;
